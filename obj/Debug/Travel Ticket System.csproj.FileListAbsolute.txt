@@ -1,0 +1,13 @@
+C:\Users\VâviZof\Desktop\Travel Ticket System\bin\Debug\Travel Ticket System.exe.config
+C:\Users\VâviZof\Desktop\Travel Ticket System\bin\Debug\Travel Ticket System.exe
+C:\Users\VâviZof\Desktop\Travel Ticket System\bin\Debug\Travel Ticket System.pdb
+C:\Users\VâviZof\Desktop\Travel Ticket System\obj\Debug\Travel Ticket System.csproj.AssemblyReference.cache
+C:\Users\VâviZof\Desktop\Travel Ticket System\obj\Debug\Travel_Ticket_System.Form1.resources
+C:\Users\VâviZof\Desktop\Travel Ticket System\obj\Debug\Travel_Ticket_System.Properties.Resources.resources
+C:\Users\VâviZof\Desktop\Travel Ticket System\obj\Debug\Travel Ticket System.csproj.GenerateResource.cache
+C:\Users\VâviZof\Desktop\Travel Ticket System\obj\Debug\Travel Ticket System.csproj.CoreCompileInputs.cache
+C:\Users\VâviZof\Desktop\Travel Ticket System\obj\Debug\Travel Ticket System.exe
+C:\Users\VâviZof\Desktop\Travel Ticket System\obj\Debug\Travel Ticket System.pdb
+C:\Users\VâviZof\Desktop\Travel Ticket System\obj\Debug\Travel_Ticket_System.AdminScreen.resources
+C:\Users\VâviZof\Desktop\Travel Ticket System\obj\Debug\Travel_Ticket_System.FirmScreen.resources
+C:\Users\VâviZof\Desktop\Travel Ticket System\obj\Debug\Travel_Ticket_System.PassengerScreen.resources

@@ -16,5 +16,23 @@ namespace Travel_Ticket_System
         {
             InitializeComponent();
         }
+
+        private void buttonYolcu_Click(object sender, EventArgs e)
+        {
+            PassengerScreen passengerScreen = new PassengerScreen();
+            passengerScreen.ShowDialog();
+        }
+
+        private void buttonAdmin_Click(object sender, EventArgs e)
+        {
+            AdminScreen adminScreen = new AdminScreen();
+            adminScreen.ShowDialog();
+        }
+
+        private void buttonFirma_Click(object sender, EventArgs e)
+        {
+            FirmScreen firmScreen = new FirmScreen();
+            firmScreen.ShowDialog();
+        }
     }
 }
