@@ -1,7 +1,28 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\V\u00E2viZof\\Desktop\\Travel Ticket System\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9B9D26EB-F4B0-4020-BB01-833C25E38FE0}|Travel Ticket System.csproj|c:\\users\\v\u00E2vizof\\desktop\\travel ticket system\\adminscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9B9D26EB-F4B0-4020-BB01-833C25E38FE0}|Travel Ticket System.csproj|solutionrelative:adminscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B9D26EB-F4B0-4020-BB01-833C25E38FE0}|Travel Ticket System.csproj|c:\\users\\v\u00E2vizof\\desktop\\travel ticket system\\adminscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{9B9D26EB-F4B0-4020-BB01-833C25E38FE0}|Travel Ticket System.csproj|solutionrelative:adminscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B9D26EB-F4B0-4020-BB01-833C25E38FE0}|Travel Ticket System.csproj|c:\\users\\v\u00E2vizof\\desktop\\travel ticket system\\class\\loginmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9B9D26EB-F4B0-4020-BB01-833C25E38FE0}|Travel Ticket System.csproj|solutionrelative:class\\loginmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B9D26EB-F4B0-4020-BB01-833C25E38FE0}|Travel Ticket System.csproj|c:\\users\\v\u00E2vizof\\desktop\\travel ticket system\\class\\buisness.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9B9D26EB-F4B0-4020-BB01-833C25E38FE0}|Travel Ticket System.csproj|solutionrelative:class\\buisness.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B9D26EB-F4B0-4020-BB01-833C25E38FE0}|Travel Ticket System.csproj|c:\\users\\v\u00E2vizof\\desktop\\travel ticket system\\class\\company.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9B9D26EB-F4B0-4020-BB01-833C25E38FE0}|Travel Ticket System.csproj|solutionrelative:class\\company.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -26,6 +47,70 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Buisness.cs",
+              "DocumentMoniker": "C:\\Users\\V\u00E2viZof\\Desktop\\Travel Ticket System\\Class\\Buisness.cs",
+              "RelativeDocumentMoniker": "Class\\Buisness.cs",
+              "ToolTip": "C:\\Users\\V\u00E2viZof\\Desktop\\Travel Ticket System\\Class\\Buisness.cs",
+              "RelativeToolTip": "Class\\Buisness.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-17T12:31:36.153Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Company.cs",
+              "DocumentMoniker": "C:\\Users\\V\u00E2viZof\\Desktop\\Travel Ticket System\\Class\\Company.cs",
+              "RelativeDocumentMoniker": "Class\\Company.cs",
+              "ToolTip": "C:\\Users\\V\u00E2viZof\\Desktop\\Travel Ticket System\\Class\\Company.cs",
+              "RelativeToolTip": "Class\\Company.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-17T07:24:04.265Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "LoginManager.cs",
+              "DocumentMoniker": "C:\\Users\\V\u00E2viZof\\Desktop\\Travel Ticket System\\Class\\LoginManager.cs",
+              "RelativeDocumentMoniker": "Class\\LoginManager.cs",
+              "ToolTip": "C:\\Users\\V\u00E2viZof\\Desktop\\Travel Ticket System\\Class\\LoginManager.cs",
+              "RelativeToolTip": "Class\\LoginManager.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABkAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-17T06:22:48.497Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AdminScreen.cs",
+              "DocumentMoniker": "C:\\Users\\V\u00E2viZof\\Desktop\\Travel Ticket System\\AdminScreen.cs",
+              "RelativeDocumentMoniker": "AdminScreen.cs",
+              "ToolTip": "C:\\Users\\V\u00E2viZof\\Desktop\\Travel Ticket System\\AdminScreen.cs",
+              "RelativeToolTip": "AdminScreen.cs",
+              "ViewState": "AQIAABgAAAAAAAAAAAAgwGAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-17T06:09:32.861Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AdminScreen.cs [Tasar\u0131m]",
+              "DocumentMoniker": "C:\\Users\\V\u00E2viZof\\Desktop\\Travel Ticket System\\AdminScreen.cs",
+              "RelativeDocumentMoniker": "AdminScreen.cs",
+              "ToolTip": "C:\\Users\\V\u00E2viZof\\Desktop\\Travel Ticket System\\AdminScreen.cs [Tasar\u0131m]",
+              "RelativeToolTip": "AdminScreen.cs [Tasar\u0131m]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-17T05:59:43.54Z",
+              "EditorCaption": " [Tasar\u0131m]"
             }
           ]
         }

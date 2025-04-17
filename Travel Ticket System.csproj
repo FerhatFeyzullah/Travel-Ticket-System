@@ -52,6 +52,10 @@
     <Compile Include="AdminScreen.Designer.cs">
       <DependentUpon>AdminScreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="Class\Buisness.cs" />
+    <Compile Include="Class\Company.cs" />
+    <Compile Include="Class\Login.cs" />
+    <Compile Include="Class\LoginManager.cs" />
     <Compile Include="FirmScreen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,5 +110,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
