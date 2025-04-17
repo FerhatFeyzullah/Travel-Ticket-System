@@ -28,6 +28,7 @@ namespace Travel_Ticket_System
             adminGirisPanel.Visible = true;
             sifreText.UseSystemPasswordChar = true;
             GuncelleComboBox();
+            
 
         }
 
@@ -64,17 +65,21 @@ namespace Travel_Ticket_System
         private void firmaEkleButon_Click(object sender, EventArgs e)
         {
             string ad = firmaEkleText.Text;
-            string tip = cmbFirmaTipiList.SelectedItem.ToString();
+            string tip = cmbFirmaTipiEkleList.SelectedItem.ToString();
 
-            if (string.IsNullOrWhiteSpace(firmaEkleText.Text) || string.IsNullOrWhiteSpace(cmbFirmaTipiList.Text))
+            string user = firmaEkleText.Text;
+            string pass = firmaEkleText.Text + "123";
+
+            if (string.IsNullOrWhiteSpace(firmaEkleText.Text) || string.IsNullOrWhiteSpace(cmbFirmaTipiEkleList.Text))
             {
                 MessageBox.Show("Firma adı ve tipi seçilmelidir.");
                 return;
             }
 
-            Company yeniFirma = new Company(ad, tip);
-
+            Company yeniFirma = new Company(ad, tip,user,pass);
+            MessageBox.Show("Firma Eklendi!");
             Buisness.Firmalar.Add(yeniFirma);
+
             GuncelleComboBox();
             
         }
@@ -84,7 +89,9 @@ namespace Travel_Ticket_System
             firmalarList.Items.Clear();
 
             firmaEkleText.Text = "";
-            cmbFirmaTipiList.Text = "";
+            cmbFirmaTipiEkleList.Text = "";
+            firmaCikartText.Text = "";
+            cmbFirmaTipiCikarList.Text = "";
 
             foreach (Company f in Buisness.Firmalar)
             {
@@ -92,5 +99,25 @@ namespace Travel_Ticket_System
             }
         }
 
+        private void firmaCikartButon_Click(object sender, EventArgs e)
+        {
+            string gelenAd = firmaCikartText.Text;
+            string gelenTip = cmbFirmaTipiCikarList.SelectedItem.ToString();
+
+            
+
+            for (int i = 0; i < Buisness.Firmalar.Count; i++)
+            {
+                if (Buisness.Firmalar[i].companyName == gelenAd &&
+                    Buisness.Firmalar[i].companyType == gelenTip)
+                {
+                    Buisness.Firmalar.RemoveAt(i);
+                    MessageBox.Show("Firma silindi!");
+                    GuncelleComboBox();
+                    break;
+                }
+            }
+
+        }
     }
 }
