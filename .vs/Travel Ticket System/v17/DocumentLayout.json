@@ -7,23 +7,23 @@
       "RelativeMoniker": "D:0:0:{9B9D26EB-F4B0-4020-BB01-833C25E38FE0}|Travel Ticket System.csproj|solutionrelative:firmscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9B9D26EB-F4B0-4020-BB01-833C25E38FE0}|Travel Ticket System.csproj|c:\\users\\v\u00E2vizof\\desktop\\travel ticket system\\firmscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{9B9D26EB-F4B0-4020-BB01-833C25E38FE0}|Travel Ticket System.csproj|solutionrelative:firmscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{9B9D26EB-F4B0-4020-BB01-833C25E38FE0}|Travel Ticket System.csproj|C:\\Users\\V\u00E2viZof\\Desktop\\Travel Ticket System\\AdminScreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9B9D26EB-F4B0-4020-BB01-833C25E38FE0}|Travel Ticket System.csproj|solutionrelative:AdminScreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9B9D26EB-F4B0-4020-BB01-833C25E38FE0}|Travel Ticket System.csproj|c:\\users\\v\u00E2vizof\\desktop\\travel ticket system\\class\\company.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9B9D26EB-F4B0-4020-BB01-833C25E38FE0}|Travel Ticket System.csproj|C:\\Users\\V\u00E2viZof\\Desktop\\Travel Ticket System\\class\\company.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9B9D26EB-F4B0-4020-BB01-833C25E38FE0}|Travel Ticket System.csproj|solutionrelative:class\\company.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9B9D26EB-F4B0-4020-BB01-833C25E38FE0}|Travel Ticket System.csproj|c:\\users\\v\u00E2vizof\\desktop\\travel ticket system\\class\\business.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9B9D26EB-F4B0-4020-BB01-833C25E38FE0}|Travel Ticket System.csproj|C:\\Users\\V\u00E2viZof\\Desktop\\Travel Ticket System\\class\\business.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9B9D26EB-F4B0-4020-BB01-833C25E38FE0}|Travel Ticket System.csproj|solutionrelative:class\\business.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9B9D26EB-F4B0-4020-BB01-833C25E38FE0}|Travel Ticket System.csproj|c:\\users\\v\u00E2vizof\\desktop\\travel ticket system\\class\\vehicle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9B9D26EB-F4B0-4020-BB01-833C25E38FE0}|Travel Ticket System.csproj|C:\\Users\\V\u00E2viZof\\Desktop\\Travel Ticket System\\firmscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{9B9D26EB-F4B0-4020-BB01-833C25E38FE0}|Travel Ticket System.csproj|solutionrelative:firmscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B9D26EB-F4B0-4020-BB01-833C25E38FE0}|Travel Ticket System.csproj|C:\\Users\\V\u00E2viZof\\Desktop\\Travel Ticket System\\class\\vehicle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9B9D26EB-F4B0-4020-BB01-833C25E38FE0}|Travel Ticket System.csproj|solutionrelative:class\\vehicle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -58,7 +58,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "FirmScreen.cs [Tasar\u0131m]",
               "DocumentMoniker": "C:\\Users\\V\u00E2viZof\\Desktop\\Travel Ticket System\\FirmScreen.cs",
               "RelativeDocumentMoniker": "FirmScreen.cs",
@@ -70,13 +70,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "Company.cs",
               "DocumentMoniker": "C:\\Users\\V\u00E2viZof\\Desktop\\Travel Ticket System\\Class\\Company.cs",
               "RelativeDocumentMoniker": "Class\\Company.cs",
               "ToolTip": "C:\\Users\\V\u00E2viZof\\Desktop\\Travel Ticket System\\Class\\Company.cs",
               "RelativeToolTip": "Class\\Company.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAQwBwAAAAJAAAA",
+              "ViewState": "AQIAABAAAAAAAAAAAAAowBwAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-18T13:14:34.516Z",
               "EditorCaption": ""
@@ -91,8 +91,7 @@
               "RelativeToolTip": "Class\\Vehicle.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-18T09:29:24.122Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-18T09:29:24.122Z"
             },
             {
               "$type": "Document",
@@ -102,33 +101,33 @@
               "RelativeDocumentMoniker": "FirmScreen.cs",
               "ToolTip": "C:\\Users\\V\u00E2viZof\\Desktop\\Travel Ticket System\\FirmScreen.cs",
               "RelativeToolTip": "FirmScreen.cs",
-              "ViewState": "AQIAAF0AAAAAAAAAAAAvwIUAAAAAAAAA",
+              "ViewState": "AQIAACMAAAAAAAAAAADwvy8AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-17T17:36:08.781Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "AdminScreen.cs",
               "DocumentMoniker": "C:\\Users\\V\u00E2viZof\\Desktop\\Travel Ticket System\\AdminScreen.cs",
               "RelativeDocumentMoniker": "AdminScreen.cs",
               "ToolTip": "C:\\Users\\V\u00E2viZof\\Desktop\\Travel Ticket System\\AdminScreen.cs",
               "RelativeToolTip": "AdminScreen.cs",
-              "ViewState": "AQIAAEIAAAAAAAAAAAAIwGAAAAAqAAAA",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAqwGAAAAAqAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-17T17:24:39.956Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "Business.cs",
               "DocumentMoniker": "C:\\Users\\V\u00E2viZof\\Desktop\\Travel Ticket System\\Class\\Business.cs",
               "RelativeDocumentMoniker": "Class\\Business.cs",
               "ToolTip": "C:\\Users\\V\u00E2viZof\\Desktop\\Travel Ticket System\\Class\\Business.cs",
               "RelativeToolTip": "Class\\Business.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAqwBoAAAAIAAAA",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAQwBoAAAA5AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-17T12:31:36.153Z",
               "EditorCaption": ""
@@ -143,8 +142,7 @@
               "RelativeToolTip": "Class\\LoginManager.cs",
               "ViewState": "AQIAAAYAAAAAAAAAAAAAABsAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T06:22:48.497Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-17T06:22:48.497Z"
             }
           ]
         }

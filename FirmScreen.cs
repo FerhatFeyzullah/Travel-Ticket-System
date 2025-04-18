@@ -44,9 +44,13 @@ namespace Travel_Ticket_System
                     panelFirmScreen.Visible = true;
                     firmGirisPanel.Visible = false;
                     firmNameText.Text = business.Firmalar[i].companyName;
-                    //aktifFirma = i;
+                    
 
                     aktifComp = business.Firmalar[i];
+                    foreach (var arac in aktifComp.Araclar)
+                    {
+                        cmbMevcutAraclarList.Items.Add(arac);
+                    }
                     durum = true;
                     break;
 
@@ -113,6 +117,12 @@ namespace Travel_Ticket_System
 
         }
 
+        
+        private void MevcutAraclariGuncelle()
+        {
+
+        }
+        
         private void GuncelleComboBox()
         {
             cmbMevcutAraclarList.Items.Clear();
@@ -122,7 +132,7 @@ namespace Travel_Ticket_System
 
             foreach (var arac in aktifComp.Araclar)
             {
-                cmbMevcutAraclarList.Items.Add(arac); // ToString sayesinde tipiyle birlikte görünür
+                cmbMevcutAraclarList.Items.Add(arac); 
             }
 
 

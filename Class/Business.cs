@@ -22,9 +22,29 @@ namespace Travel_Ticket_System.Class
             Firmalar.Add(C3);
             Firmalar.Add(C4);
 
+            C1.AracEkle(new Train { Plaka = "54TRN54" });
+            C1.AracEkle(new Train { Plaka = "34TRN34" });
+            C1.AracEkle(new Train { Plaka = "61TRN61" });
+
+            C2.AracEkle(new Bus { Plaka = "54MTR54" });
+            C2.AracEkle(new Bus { Plaka = "34MTR34" });
+            C2.AracEkle(new Bus { Plaka = "61MTR61" });
+
+            C3.AracEkle(new Bus { Plaka = "54VIB54" });
+            C3.AracEkle(new Bus { Plaka = "34VIB34" });
+            C3.AracEkle(new Bus { Plaka = "61VIB61" });
+
+            C4.AracEkle(new Bus { Plaka = "TK2954" });
+            C4.AracEkle(new Bus { Plaka = "TK2934" });
+            C4.AracEkle(new Bus { Plaka = "TK2961" });
+
+
+
+
+
         }
 
-        
+
 
 
     }
