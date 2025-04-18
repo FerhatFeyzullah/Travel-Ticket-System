@@ -52,10 +52,14 @@
     <Compile Include="AdminScreen.Designer.cs">
       <DependentUpon>AdminScreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="Class\Airplane.cs" />
     <Compile Include="Class\Buisness.cs" />
+    <Compile Include="Class\Bus.cs" />
     <Compile Include="Class\Company.cs" />
     <Compile Include="Class\Login.cs" />
     <Compile Include="Class\LoginManager.cs" />
+    <Compile Include="Class\Train.cs" />
+    <Compile Include="Class\Vehicle.cs" />
     <Compile Include="FirmScreen.cs">
       <SubType>Form</SubType>
     </Compile>

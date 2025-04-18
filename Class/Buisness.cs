@@ -13,22 +13,17 @@ namespace Travel_Ticket_System.Class
 
         static Buisness()
         {
-            Company C1 = new Company("YHT","Tren","YHT","YHT123");
-            Company C2 = new Company("Metro", "Otobüs", "Metro", "Metro123");
-            Company C3 = new Company("VIB","Otobüs", "VIB","VIB123");
-            Company C4 = new Company("THY", "Uçak", "THY", "THY123");
+            Company C1 = new Company("YHT", "YHT", "YHT123");
+            Company C2 = new Company("Metro", "Metro", "Metro123");
+            Company C3 = new Company("VIB", "VIB", "VIB123");
+            Company C4 = new Company("THY", "THY", "THY123");
             Firmalar.Add(C1);
             Firmalar.Add(C2);
             Firmalar.Add(C3);
             Firmalar.Add(C4);
 
-
-
         }
 
-
     }
-
-    
 
 }

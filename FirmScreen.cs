@@ -18,18 +18,25 @@ namespace Travel_Ticket_System
         {
             InitializeComponent();
         }
-        
+        int aktifFirma;
+        Company aktifComp;
 
-        private void FirmScreen_Load(object sender, EventArgs e)
+        public void FirmScreen_Load(object sender, EventArgs e)
         {
-            firmGirisPanel.Visible = false;
-            panelFirmScreen.Visible = true;
+            firmGirisPanel.Visible = true;
+            panelFirmScreen.Visible = false;
+
+            //firmGirisPanel.Visible = false;
+            //panelFirmScreen.Visible = true;
             sifreText.UseSystemPasswordChar = true;
+            GuncelleComboBox();
+
+
         }
 
         private void firmGirisYapButton_Click(object sender, EventArgs e)
         {
-
+            
             bool durum = false;
             for (int i = 0; i < Buisness.Firmalar.Count; i++)
             {
@@ -37,6 +44,10 @@ namespace Travel_Ticket_System
                 {
                     panelFirmScreen.Visible = true;
                     firmGirisPanel.Visible = false;
+                    firmNameText.Text = Buisness.Firmalar[i].companyName;
+                    //aktifFirma = i;
+
+                    aktifComp = Buisness.Firmalar[i];
                     durum = true;
                     break;
 
@@ -66,5 +77,71 @@ namespace Travel_Ticket_System
                 sifreText.UseSystemPasswordChar = true;
             }
         }
+
+        private void aracEkleButton_Click(object sender, EventArgs e)
+        {
+            string gelenplaka = gelenPlakaEkleme.Text;
+            string gelentip = cmbAracTipiEkle.SelectedItem?.ToString();
+
+
+            if (string.IsNullOrWhiteSpace(gelenPlakaEkleme.Text) || string.IsNullOrWhiteSpace(cmbAracTipiEkle.Text))
+            {
+                MessageBox.Show("Lütfen Plaka Giriniz.");
+                return;
+            }
+            Vehicle yeniArac = null;
+
+            switch (gelentip)
+            {
+                case "Otobüs":
+                    yeniArac = new Bus { Plaka = gelenplaka };
+                    break;
+                case "Uçak":
+                    yeniArac = new Airplane { Plaka = gelenplaka };
+                    break;
+                case "Tren":
+                    yeniArac = new Train { Plaka = gelenplaka };
+                    break;
+                default:
+                    MessageBox.Show("Geçersiz araç tipi.");
+                    return;
+            }
+
+            aktifComp.AracEkle(yeniArac);
+            MessageBox.Show("Araç başarıyla eklendi!");
+
+
+
+
+
+            GuncelleComboBox();
+
+
+
+
+        }
+
+        private void GuncelleComboBox()
+        {
+            cmbMevcutAraclarList.Items.Clear();
+            gelenPlakaEkleme.Text = "";
+            cmbAracTipiEkle.Text = "";
+
+            cmbMevcutAraclarList.Items.Clear();
+            foreach ( arac in aktifComp.Araclar)
+            {
+                cmbMevcutAraclar.Items.Add(arac); // ToString sayesinde tipiyle birlikte görünür
+            }
+
+            for(int j =0;j<aktifComp.ara)
+
+            // Temizle
+            txtPlaka.Clear();
+            cmbAracTipi.SelectedIndex = -1;
+
+
+
+        }
+
     }
 }

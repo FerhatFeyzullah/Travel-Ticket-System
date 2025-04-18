@@ -65,18 +65,18 @@ namespace Travel_Ticket_System
         private void firmaEkleButon_Click(object sender, EventArgs e)
         {
             string ad = firmaEkleText.Text;
-            string tip = cmbFirmaTipiEkleList.SelectedItem.ToString();
+            //string tip = cmbFirmaTipiEkleList.SelectedItem.ToString();
 
             string user = firmaEkleText.Text;
             string pass = firmaEkleText.Text + "123";
 
-            if (string.IsNullOrWhiteSpace(firmaEkleText.Text) || string.IsNullOrWhiteSpace(cmbFirmaTipiEkleList.Text))
+            if (string.IsNullOrWhiteSpace(firmaEkleText.Text) )
             {
-                MessageBox.Show("Firma adı ve tipi seçilmelidir.");
+                MessageBox.Show("Firma adı Yazmadınız.");
                 return;
             }
 
-            Company yeniFirma = new Company(ad, tip,user,pass);
+            Company yeniFirma = new Company(ad,user,pass);
             MessageBox.Show("Firma Eklendi!");
             Buisness.Firmalar.Add(yeniFirma);
 
@@ -89,9 +89,9 @@ namespace Travel_Ticket_System
             firmalarList.Items.Clear();
 
             firmaEkleText.Text = "";
-            cmbFirmaTipiEkleList.Text = "";
+            //cmbFirmaTipiEkleList.Text = "";
             firmaCikartText.Text = "";
-            cmbFirmaTipiCikarList.Text = "";
+            //cmbFirmaTipiCikarList.Text = "";
 
             foreach (Company f in Buisness.Firmalar)
             {
@@ -102,14 +102,13 @@ namespace Travel_Ticket_System
         private void firmaCikartButon_Click(object sender, EventArgs e)
         {
             string gelenAd = firmaCikartText.Text;
-            string gelenTip = cmbFirmaTipiCikarList.SelectedItem.ToString();
+            //string gelenTip = cmbFirmaTipiCikarList.SelectedItem.ToString();
 
             
 
             for (int i = 0; i < Buisness.Firmalar.Count; i++)
             {
-                if (Buisness.Firmalar[i].companyName == gelenAd &&
-                    Buisness.Firmalar[i].companyType == gelenTip)
+                if (Buisness.Firmalar[i].companyName == gelenAd ) //Buisness.Firmalar[i].companyType == gelenTip)
                 {
                     Buisness.Firmalar.RemoveAt(i);
                     MessageBox.Show("Firma silindi!");

@@ -10,15 +10,21 @@ namespace Travel_Ticket_System.Class
     public class Company : Login
     {
         public string companyName;
-        public string companyType;
+        //public string companyType;
 
         public string Username { get; set; }
         public string Password { get; set; }
 
-        public Company(string companyIsim, string companyTip, string name, string pass)
+
+
+        
+
+        
+
+        public Company(string companyIsim, string name, string pass)
         {
             companyName = companyIsim;
-            companyType = companyTip;
+           // companyType = companyTip;
             Username = name;
             Password = pass;
         }
@@ -32,8 +38,16 @@ namespace Travel_Ticket_System.Class
         public override string ToString()
         {
 
-            return $"{companyName} ({companyType})";
+            return $"{companyName} (Turizm)";
         }
+
+        public static List<Vehicle> Araclar = new List<Vehicle>();
+
+        public void AracEkle(Vehicle arac)
+        {
+            Araclar.Add(arac);
+        }
+
 
 
     }
