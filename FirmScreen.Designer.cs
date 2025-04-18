@@ -37,7 +37,18 @@
             this.firmGirisYapButton = new System.Windows.Forms.Button();
             this.kullaniciAdiText = new System.Windows.Forms.TextBox();
             this.panelFirmScreen = new System.Windows.Forms.Panel();
-            this.firmNameText = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.cmbAracTipiEkle = new System.Windows.Forms.ComboBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.cmbMevcutAraclarList = new System.Windows.Forms.ComboBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.aracCikarButton = new System.Windows.Forms.Button();
+            this.aracEkleButton = new System.Windows.Forms.Button();
+            this.label13 = new System.Windows.Forms.Label();
+            this.gelenPlakaCikarma = new System.Windows.Forms.TextBox();
+            this.gelenPlakaEkleme = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.cmbFirmaTipiCikarList = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -50,22 +61,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.firmaCikartText = new System.Windows.Forms.TextBox();
             this.firmaEkleText = new System.Windows.Forms.TextBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.aracCikarButton = new System.Windows.Forms.Button();
-            this.aracEkleButton = new System.Windows.Forms.Button();
-            this.label13 = new System.Windows.Forms.Label();
-            this.gelenPlakaCikarma = new System.Windows.Forms.TextBox();
-            this.gelenPlakaEkleme = new System.Windows.Forms.TextBox();
-            this.cmbMevcutAraclarList = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.cmbAracTipiEkle = new System.Windows.Forms.ComboBox();
-            this.label10 = new System.Windows.Forms.Label();
+            this.firmNameText = new System.Windows.Forms.Label();
             this.firmGirisPanel.SuspendLayout();
             this.panelFirmScreen.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // firmGirisPanel
@@ -162,16 +162,130 @@
             this.panelFirmScreen.Size = new System.Drawing.Size(754, 431);
             this.panelFirmScreen.TabIndex = 4;
             // 
-            // firmNameText
+            // panel2
             // 
-            this.firmNameText.Dock = System.Windows.Forms.DockStyle.Top;
-            this.firmNameText.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.firmNameText.Location = new System.Drawing.Point(0, 0);
-            this.firmNameText.Name = "firmNameText";
-            this.firmNameText.Size = new System.Drawing.Size(754, 19);
-            this.firmNameText.TabIndex = 0;
-            this.firmNameText.Text = "huhu";
-            this.firmNameText.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.panel2.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.panel2.Controls.Add(this.cmbAracTipiEkle);
+            this.panel2.Controls.Add(this.label10);
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.cmbMevcutAraclarList);
+            this.panel2.Controls.Add(this.label11);
+            this.panel2.Controls.Add(this.label12);
+            this.panel2.Controls.Add(this.aracCikarButton);
+            this.panel2.Controls.Add(this.aracEkleButton);
+            this.panel2.Controls.Add(this.label13);
+            this.panel2.Controls.Add(this.gelenPlakaCikarma);
+            this.panel2.Controls.Add(this.gelenPlakaEkleme);
+            this.panel2.Location = new System.Drawing.Point(12, 52);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(343, 305);
+            this.panel2.TabIndex = 11;
+            // 
+            // cmbAracTipiEkle
+            // 
+            this.cmbAracTipiEkle.FormattingEnabled = true;
+            this.cmbAracTipiEkle.Items.AddRange(new object[] {
+            "Otobüs",
+            "Uçak",
+            "Tren"});
+            this.cmbAracTipiEkle.Location = new System.Drawing.Point(36, 173);
+            this.cmbAracTipiEkle.Name = "cmbAracTipiEkle";
+            this.cmbAracTipiEkle.Size = new System.Drawing.Size(100, 21);
+            this.cmbAracTipiEkle.TabIndex = 7;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(33, 152);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(52, 13);
+            this.label10.TabIndex = 6;
+            this.label10.Text = "Araç Tipi:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(121, 235);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(79, 13);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Mevcut Araçlar";
+            // 
+            // cmbMevcutAraclarList
+            // 
+            this.cmbMevcutAraclarList.FormattingEnabled = true;
+            this.cmbMevcutAraclarList.Location = new System.Drawing.Point(101, 256);
+            this.cmbMevcutAraclarList.Name = "cmbMevcutAraclarList";
+            this.cmbMevcutAraclarList.Size = new System.Drawing.Size(121, 21);
+            this.cmbMevcutAraclarList.TabIndex = 4;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(199, 54);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(69, 13);
+            this.label11.TabIndex = 3;
+            this.label11.Text = "Araç Plakası:";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(33, 54);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(69, 13);
+            this.label12.TabIndex = 3;
+            this.label12.Text = "Araç Plakası:";
+            // 
+            // aracCikarButton
+            // 
+            this.aracCikarButton.BackColor = System.Drawing.SystemColors.Control;
+            this.aracCikarButton.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.aracCikarButton.Location = new System.Drawing.Point(214, 113);
+            this.aracCikarButton.Name = "aracCikarButton";
+            this.aracCikarButton.Size = new System.Drawing.Size(75, 23);
+            this.aracCikarButton.TabIndex = 2;
+            this.aracCikarButton.Text = "ÇIKART";
+            this.aracCikarButton.UseVisualStyleBackColor = false;
+            this.aracCikarButton.Click += new System.EventHandler(this.aracCikarButton_Click);
+            // 
+            // aracEkleButton
+            // 
+            this.aracEkleButton.BackColor = System.Drawing.SystemColors.Control;
+            this.aracEkleButton.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.aracEkleButton.Location = new System.Drawing.Point(47, 113);
+            this.aracEkleButton.Name = "aracEkleButton";
+            this.aracEkleButton.Size = new System.Drawing.Size(75, 23);
+            this.aracEkleButton.TabIndex = 2;
+            this.aracEkleButton.Text = "EKLE";
+            this.aracEkleButton.UseVisualStyleBackColor = false;
+            this.aracEkleButton.Click += new System.EventHandler(this.aracEkleButton_Click);
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label13.Location = new System.Drawing.Point(79, 16);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(180, 19);
+            this.label13.TabIndex = 1;
+            this.label13.Text = "Araç Ekleme - Çıkarma";
+            // 
+            // gelenPlakaCikarma
+            // 
+            this.gelenPlakaCikarma.Location = new System.Drawing.Point(202, 70);
+            this.gelenPlakaCikarma.Multiline = true;
+            this.gelenPlakaCikarma.Name = "gelenPlakaCikarma";
+            this.gelenPlakaCikarma.Size = new System.Drawing.Size(100, 30);
+            this.gelenPlakaCikarma.TabIndex = 0;
+            // 
+            // gelenPlakaEkleme
+            // 
+            this.gelenPlakaEkleme.Location = new System.Drawing.Point(36, 70);
+            this.gelenPlakaEkleme.Multiline = true;
+            this.gelenPlakaEkleme.Name = "gelenPlakaEkleme";
+            this.gelenPlakaEkleme.Size = new System.Drawing.Size(100, 30);
+            this.gelenPlakaEkleme.TabIndex = 0;
             // 
             // panel1
             // 
@@ -300,129 +414,16 @@
             this.firmaEkleText.Size = new System.Drawing.Size(100, 30);
             this.firmaEkleText.TabIndex = 0;
             // 
-            // panel2
+            // firmNameText
             // 
-            this.panel2.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.panel2.Controls.Add(this.cmbAracTipiEkle);
-            this.panel2.Controls.Add(this.label10);
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.cmbMevcutAraclarList);
-            this.panel2.Controls.Add(this.label11);
-            this.panel2.Controls.Add(this.label12);
-            this.panel2.Controls.Add(this.aracCikarButton);
-            this.panel2.Controls.Add(this.aracEkleButton);
-            this.panel2.Controls.Add(this.label13);
-            this.panel2.Controls.Add(this.gelenPlakaCikarma);
-            this.panel2.Controls.Add(this.gelenPlakaEkleme);
-            this.panel2.Location = new System.Drawing.Point(12, 52);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(343, 305);
-            this.panel2.TabIndex = 11;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(199, 54);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(69, 13);
-            this.label11.TabIndex = 3;
-            this.label11.Text = "Araç Plakası:";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(33, 54);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(69, 13);
-            this.label12.TabIndex = 3;
-            this.label12.Text = "Araç Plakası:";
-            // 
-            // aracCikarButton
-            // 
-            this.aracCikarButton.BackColor = System.Drawing.SystemColors.Control;
-            this.aracCikarButton.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.aracCikarButton.Location = new System.Drawing.Point(214, 113);
-            this.aracCikarButton.Name = "aracCikarButton";
-            this.aracCikarButton.Size = new System.Drawing.Size(75, 23);
-            this.aracCikarButton.TabIndex = 2;
-            this.aracCikarButton.Text = "ÇIKART";
-            this.aracCikarButton.UseVisualStyleBackColor = false;
-            // 
-            // aracEkleButton
-            // 
-            this.aracEkleButton.BackColor = System.Drawing.SystemColors.Control;
-            this.aracEkleButton.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.aracEkleButton.Location = new System.Drawing.Point(47, 113);
-            this.aracEkleButton.Name = "aracEkleButton";
-            this.aracEkleButton.Size = new System.Drawing.Size(75, 23);
-            this.aracEkleButton.TabIndex = 2;
-            this.aracEkleButton.Text = "EKLE";
-            this.aracEkleButton.UseVisualStyleBackColor = false;
-            this.aracEkleButton.Click += new System.EventHandler(this.aracEkleButton_Click);
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label13.Location = new System.Drawing.Point(79, 16);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(180, 19);
-            this.label13.TabIndex = 1;
-            this.label13.Text = "Araç Ekleme - Çıkarma";
-            // 
-            // gelenPlakaCikarma
-            // 
-            this.gelenPlakaCikarma.Location = new System.Drawing.Point(202, 70);
-            this.gelenPlakaCikarma.Multiline = true;
-            this.gelenPlakaCikarma.Name = "gelenPlakaCikarma";
-            this.gelenPlakaCikarma.Size = new System.Drawing.Size(100, 30);
-            this.gelenPlakaCikarma.TabIndex = 0;
-            // 
-            // gelenPlakaEkleme
-            // 
-            this.gelenPlakaEkleme.Location = new System.Drawing.Point(36, 70);
-            this.gelenPlakaEkleme.Multiline = true;
-            this.gelenPlakaEkleme.Name = "gelenPlakaEkleme";
-            this.gelenPlakaEkleme.Size = new System.Drawing.Size(100, 30);
-            this.gelenPlakaEkleme.TabIndex = 0;
-            // 
-            // cmbMevcutAraclarList
-            // 
-            this.cmbMevcutAraclarList.FormattingEnabled = true;
-            this.cmbMevcutAraclarList.Location = new System.Drawing.Point(101, 256);
-            this.cmbMevcutAraclarList.Name = "cmbMevcutAraclarList";
-            this.cmbMevcutAraclarList.Size = new System.Drawing.Size(121, 21);
-            this.cmbMevcutAraclarList.TabIndex = 4;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(121, 235);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(79, 13);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Mevcut Araçlar";
-            // 
-            // cmbAracTipiEkle
-            // 
-            this.cmbAracTipiEkle.FormattingEnabled = true;
-            this.cmbAracTipiEkle.Items.AddRange(new object[] {
-            "Otobüs",
-            "Uçak",
-            "Tren"});
-            this.cmbAracTipiEkle.Location = new System.Drawing.Point(36, 173);
-            this.cmbAracTipiEkle.Name = "cmbAracTipiEkle";
-            this.cmbAracTipiEkle.Size = new System.Drawing.Size(100, 21);
-            this.cmbAracTipiEkle.TabIndex = 7;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(33, 152);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(52, 13);
-            this.label10.TabIndex = 6;
-            this.label10.Text = "Araç Tipi:";
+            this.firmNameText.Dock = System.Windows.Forms.DockStyle.Top;
+            this.firmNameText.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.firmNameText.Location = new System.Drawing.Point(0, 0);
+            this.firmNameText.Name = "firmNameText";
+            this.firmNameText.Size = new System.Drawing.Size(754, 19);
+            this.firmNameText.TabIndex = 0;
+            this.firmNameText.Text = "huhu";
+            this.firmNameText.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FirmScreen
             // 
@@ -440,10 +441,10 @@
             this.firmGirisPanel.ResumeLayout(false);
             this.firmGirisPanel.PerformLayout();
             this.panelFirmScreen.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }

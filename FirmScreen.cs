@@ -18,8 +18,8 @@ namespace Travel_Ticket_System
         {
             InitializeComponent();
         }
-        int aktifFirma;
-        Company aktifComp;
+        Company aktifComp = new Company();
+        Business business = new Business();
 
         public void FirmScreen_Load(object sender, EventArgs e)
         {
@@ -31,23 +31,22 @@ namespace Travel_Ticket_System
             sifreText.UseSystemPasswordChar = true;
             GuncelleComboBox();
 
-
         }
 
         private void firmGirisYapButton_Click(object sender, EventArgs e)
         {
             
             bool durum = false;
-            for (int i = 0; i < Buisness.Firmalar.Count; i++)
+            for (int i = 0; i < business.Firmalar.Count; i++)
             {
-                if (Buisness.Firmalar[i].GirisYap(kullaniciAdiText.Text, sifreText.Text))
+                if (business.Firmalar[i].GirisYap(kullaniciAdiText.Text, sifreText.Text))
                 {
                     panelFirmScreen.Visible = true;
                     firmGirisPanel.Visible = false;
-                    firmNameText.Text = Buisness.Firmalar[i].companyName;
+                    firmNameText.Text = business.Firmalar[i].companyName;
                     //aktifFirma = i;
 
-                    aktifComp = Buisness.Firmalar[i];
+                    aktifComp = business.Firmalar[i];
                     durum = true;
                     break;
 
@@ -80,8 +79,8 @@ namespace Travel_Ticket_System
 
         private void aracEkleButton_Click(object sender, EventArgs e)
         {
-            string gelenplaka = gelenPlakaEkleme.Text;
-            string gelentip = cmbAracTipiEkle.SelectedItem?.ToString();
+             string gelenplaka = gelenPlakaEkleme.Text;
+             string gelentip = cmbAracTipiEkle.SelectedItem?.ToString();
 
 
             if (string.IsNullOrWhiteSpace(gelenPlakaEkleme.Text) || string.IsNullOrWhiteSpace(cmbAracTipiEkle.Text))
@@ -94,13 +93,13 @@ namespace Travel_Ticket_System
             switch (gelentip)
             {
                 case "Otobüs":
-                    yeniArac = new Bus { Plaka = gelenplaka };
+                    yeniArac = new Bus { Plaka = gelenplaka + " ("+ gelentip + ")" };
                     break;
                 case "Uçak":
-                    yeniArac = new Airplane { Plaka = gelenplaka };
+                    yeniArac = new Airplane { Plaka = gelenplaka + " (" + gelentip + ")" };
                     break;
                 case "Tren":
-                    yeniArac = new Train { Plaka = gelenplaka };
+                    yeniArac = new Train { Plaka = gelenplaka + " (" + gelentip + ")" };
                     break;
                 default:
                     MessageBox.Show("Geçersiz araç tipi.");
@@ -110,14 +109,7 @@ namespace Travel_Ticket_System
             aktifComp.AracEkle(yeniArac);
             MessageBox.Show("Araç başarıyla eklendi!");
 
-
-
-
-
             GuncelleComboBox();
-
-
-
 
         }
 
@@ -126,22 +118,31 @@ namespace Travel_Ticket_System
             cmbMevcutAraclarList.Items.Clear();
             gelenPlakaEkleme.Text = "";
             cmbAracTipiEkle.Text = "";
+            gelenPlakaCikarma.Text = "";
 
-            cmbMevcutAraclarList.Items.Clear();
-            foreach ( arac in aktifComp.Araclar)
+            foreach (var arac in aktifComp.Araclar)
             {
-                cmbMevcutAraclar.Items.Add(arac); // ToString sayesinde tipiyle birlikte görünür
+                cmbMevcutAraclarList.Items.Add(arac); // ToString sayesinde tipiyle birlikte görünür
             }
-
-            for(int j =0;j<aktifComp.ara)
-
-            // Temizle
-            txtPlaka.Clear();
-            cmbAracTipi.SelectedIndex = -1;
-
 
 
         }
 
+        private void aracCikarButton_Click(object sender, EventArgs e)
+        {
+            string gelenCikarmaPlaka = gelenPlakaCikarma.Text;
+
+
+            for (int i = 0; i < aktifComp.Araclar.Count; i++)
+            {
+                if (aktifComp.Araclar[i].Plaka == gelenCikarmaPlaka)
+                {
+                    aktifComp.Araclar.RemoveAt(i);
+                    MessageBox.Show("Araç başarıyla silindi!");
+                    GuncelleComboBox();
+                    break;
+                }
+            }
+        }
     }
 }

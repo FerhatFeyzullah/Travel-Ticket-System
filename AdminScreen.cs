@@ -19,8 +19,10 @@ namespace Travel_Ticket_System
         }
 
         Login admin = new LoginManager.Admin("admin", "12345");
-        
-        
+        Business business = new Business();
+
+
+
 
         private void AdminScreen_Load(object sender, EventArgs e)
         {
@@ -78,7 +80,7 @@ namespace Travel_Ticket_System
 
             Company yeniFirma = new Company(ad,user,pass);
             MessageBox.Show("Firma Eklendi!");
-            Buisness.Firmalar.Add(yeniFirma);
+            business.Firmalar.Add(yeniFirma);
 
             GuncelleComboBox();
             
@@ -87,13 +89,10 @@ namespace Travel_Ticket_System
         private void GuncelleComboBox()
         {
             firmalarList.Items.Clear();
+            firmaEkleText.Text = "";           
+            firmaCikartText.Text = "";            
 
-            firmaEkleText.Text = "";
-            //cmbFirmaTipiEkleList.Text = "";
-            firmaCikartText.Text = "";
-            //cmbFirmaTipiCikarList.Text = "";
-
-            foreach (Company f in Buisness.Firmalar)
+            foreach (Company f in business.Firmalar)
             {
                 firmalarList.Items.Add(f);
             }
@@ -102,15 +101,15 @@ namespace Travel_Ticket_System
         private void firmaCikartButon_Click(object sender, EventArgs e)
         {
             string gelenAd = firmaCikartText.Text;
-            //string gelenTip = cmbFirmaTipiCikarList.SelectedItem.ToString();
+            
 
             
 
-            for (int i = 0; i < Buisness.Firmalar.Count; i++)
+            for (int i = 0; i < business.Firmalar.Count; i++)
             {
-                if (Buisness.Firmalar[i].companyName == gelenAd ) //Buisness.Firmalar[i].companyType == gelenTip)
+                if (business.Firmalar[i].companyName == gelenAd ) 
                 {
-                    Buisness.Firmalar.RemoveAt(i);
+                    business.Firmalar.RemoveAt(i);
                     MessageBox.Show("Firma silindi!");
                     GuncelleComboBox();
                     break;

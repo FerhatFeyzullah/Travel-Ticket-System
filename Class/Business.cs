@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace Travel_Ticket_System.Class
 {
-    public static class Buisness // static yapalım ki her yerden erişebilesin
+    public class Business // static yapalım ki her yerden erişebilesin
     {
-        public static List<Company> Firmalar = new List<Company>();
+        public List<Company> Firmalar = new List<Company>();
 
-        static Buisness()
+        public Business()
         {
             Company C1 = new Company("YHT", "YHT", "YHT123");
             Company C2 = new Company("Metro", "Metro", "Metro123");
@@ -23,6 +23,9 @@ namespace Travel_Ticket_System.Class
             Firmalar.Add(C4);
 
         }
+
+        
+
 
     }
 

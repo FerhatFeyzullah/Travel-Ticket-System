@@ -53,7 +53,7 @@
       <DependentUpon>AdminScreen.cs</DependentUpon>
     </Compile>
     <Compile Include="Class\Airplane.cs" />
-    <Compile Include="Class\Buisness.cs" />
+    <Compile Include="Class\Business.cs" />
     <Compile Include="Class\Bus.cs" />
     <Compile Include="Class\Company.cs" />
     <Compile Include="Class\Login.cs" />
