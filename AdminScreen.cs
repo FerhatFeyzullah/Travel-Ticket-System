@@ -66,9 +66,7 @@ namespace Travel_Ticket_System
 
         private void firmaEkleButon_Click(object sender, EventArgs e)
         {
-            string ad = firmaEkleText.Text;
-            //string tip = cmbFirmaTipiEkleList.SelectedItem.ToString();
-
+            string ad = firmaEkleText.Text;          
             string user = firmaEkleText.Text;
             string pass = firmaEkleText.Text + "123";
 
@@ -101,9 +99,13 @@ namespace Travel_Ticket_System
         private void firmaCikartButon_Click(object sender, EventArgs e)
         {
             string gelenAd = firmaCikartText.Text;
-            
 
-            
+            if (string.IsNullOrWhiteSpace(firmaCikartText.Text))
+            {
+                MessageBox.Show("Firma adı Yazmadınız.");
+                return;
+            }
+
 
             for (int i = 0; i < business.Firmalar.Count; i++)
             {
@@ -115,6 +117,8 @@ namespace Travel_Ticket_System
                     break;
                 }
             }
+            MessageBox.Show("Firma Bulunamadı");
+
 
         }
     }

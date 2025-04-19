@@ -82,7 +82,7 @@ namespace Travel_Ticket_System
 
             if (string.IsNullOrWhiteSpace(gelenPlakaEkleme.Text) || string.IsNullOrWhiteSpace(cmbAracTipiEkle.Text))
             {
-                MessageBox.Show("Lütfen Plaka Giriniz.");
+                MessageBox.Show("Lütfen Boşlukları Doldurunuz.");
                 return;
             }
             Vehicle yeniArac = null;
@@ -151,6 +151,12 @@ namespace Travel_Ticket_System
         {
             Vehicle gelenAracCikarma = cmbMevcutAraclarCikarList.SelectedItem as Vehicle;
 
+            if (string.IsNullOrWhiteSpace(cmbMevcutAraclarCikarList.Text))
+            {
+                MessageBox.Show("Lütfen Çıkartmak İstediğiniz Aracı Seçiniz.");
+                return;
+            }
+
             for (int i = 0; i < aktifComp.Araclar.Count; i++)
             {
                 if (aktifComp.Araclar[i] == gelenAracCikarma)
@@ -161,6 +167,8 @@ namespace Travel_Ticket_System
                     break;
                 }
             }
+            
+
         }
 
         private void seferEkleButon_Click(object sender, EventArgs e)
