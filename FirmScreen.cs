@@ -29,7 +29,7 @@ namespace Travel_Ticket_System
             //firmGirisPanel.Visible = false;
             //panelFirmScreen.Visible = true;
             sifreText.UseSystemPasswordChar = true;
-            GuncelleComboBox();
+            MevcutAraclariGuncelle();
 
         }
 
@@ -43,14 +43,10 @@ namespace Travel_Ticket_System
                 {
                     panelFirmScreen.Visible = true;
                     firmGirisPanel.Visible = false;
-                    firmNameText.Text = business.Firmalar[i].companyName;
-                    
-
+                    firmNameText.Text = business.Firmalar[i].companyName;                   
                     aktifComp = business.Firmalar[i];
-                    foreach (var arac in aktifComp.Araclar)
-                    {
-                        cmbMevcutAraclarList.Items.Add(arac);
-                    }
+                    MevcutAraclariGuncelle();
+                    MevcutSeferleriGuncelle();
                     durum = true;
                     break;
 
@@ -62,10 +58,7 @@ namespace Travel_Ticket_System
                 MessageBox.Show("Hatalı firma girişi!");
                 kullaniciAdiText.Text = "";
                 sifreText.Text = "";
-            }
-            
-
-
+            }            
 
         }
 
@@ -113,46 +106,103 @@ namespace Travel_Ticket_System
             aktifComp.AracEkle(yeniArac);
             MessageBox.Show("Araç başarıyla eklendi!");
 
-            GuncelleComboBox();
+            MevcutAraclariGuncelle();
 
         }
-
-        
+     
         private void MevcutAraclariGuncelle()
         {
-
-        }
-        
-        private void GuncelleComboBox()
-        {
-            cmbMevcutAraclarList.Items.Clear();
             gelenPlakaEkleme.Text = "";
             cmbAracTipiEkle.Text = "";
-            gelenPlakaCikarma.Text = "";
+            cmbMevcutAraclarCikarList.SelectedIndex = -1;
+            cmbMevcutAraclarList.SelectedIndex = -1;
+            cmbMevcutAraclarCikarList.Items.Clear();
+            cmbMevcutAraclarList.Items.Clear();
+            cmbAracTipiSeferEkle.Items.Clear();
 
             foreach (var arac in aktifComp.Araclar)
-            {
-                cmbMevcutAraclarList.Items.Add(arac); 
+            {                
+                cmbMevcutAraclarList.Items.Add(arac);
+                cmbMevcutAraclarCikarList.Items.Add(arac);
+                cmbAracTipiSeferEkle.Items.Add(arac);
+                
             }
-
-
         }
+
+        private void MevcutSeferleriGuncelle() 
+        {
+            seferNeredenEkle.Text = "";
+            seferNereyeEkle.Text = "";
+            cmbAracTipiSeferEkle.SelectedIndex = -1;
+            cmbMevcutSeferlerdenCikar.SelectedIndex = -1;
+            cmbMevcutSeferList.SelectedItem = -1;
+            cmbMevcutSeferList.Items.Clear();
+            cmbMevcutSeferlerdenCikar.Items.Clear();
+            seferTarihEkle.Value = DateTime.Now;
+
+            foreach (var sefer in aktifComp.Seferler)
+            {
+                cmbMevcutSeferList.Items.Add(sefer);
+                cmbMevcutSeferlerdenCikar.Items.Add(sefer);
+            }                     
+        }       
 
         private void aracCikarButton_Click(object sender, EventArgs e)
         {
-            string gelenCikarmaPlaka = gelenPlakaCikarma.Text;
-
+            Vehicle gelenAracCikarma = cmbMevcutAraclarCikarList.SelectedItem as Vehicle;
 
             for (int i = 0; i < aktifComp.Araclar.Count; i++)
             {
-                if (aktifComp.Araclar[i].Plaka == gelenCikarmaPlaka)
+                if (aktifComp.Araclar[i] == gelenAracCikarma)
                 {
                     aktifComp.Araclar.RemoveAt(i);
                     MessageBox.Show("Araç başarıyla silindi!");
-                    GuncelleComboBox();
+                    MevcutAraclariGuncelle();
                     break;
                 }
             }
         }
+
+        private void seferEkleButon_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(seferNeredenEkle.Text) || string.IsNullOrWhiteSpace(seferNereyeEkle.Text) ||
+                string.IsNullOrWhiteSpace(cmbAracTipiSeferEkle.Text))
+            {
+                MessageBox.Show("Lütfen İstenen Bilgileri Giriniz.");
+                return;
+            }
+
+            string gelenSeferNeredenEkle = seferNeredenEkle.Text;
+            string gelenSeferNereyeEkle = seferNereyeEkle.Text;
+            Vehicle gelenSeferAracEkle = cmbAracTipiSeferEkle.SelectedItem as Vehicle;
+            DateTime gelentarihEkleDT = seferTarihEkle.Value;
+          
+            aktifComp.SeferEkle(gelenSeferNeredenEkle, gelenSeferNereyeEkle,gelentarihEkleDT,gelenSeferAracEkle,aktifComp.companyName);
+            MevcutSeferleriGuncelle();
+            MessageBox.Show("Sefer Eklenmiştir.");
+        }
+
+        private void seferCikartButon_Click(object sender, EventArgs e)
+        {
+            
+            Sefer gelenSeferCikarCmb = cmbMevcutSeferlerdenCikar.SelectedItem as Sefer;
+
+
+            for (int i = 0; i < aktifComp.Seferler.Count; i++)
+            {
+                
+                if (aktifComp.Seferler[i]==gelenSeferCikarCmb)
+
+                {
+                    aktifComp.Seferler.RemoveAt(i);
+                    MessageBox.Show("Sefer başarıyla silindi!");
+                    MevcutSeferleriGuncelle();
+                    break;
+                }
+            }
+            
+        }
+
+        
     }
 }

@@ -58,6 +58,7 @@
     <Compile Include="Class\Company.cs" />
     <Compile Include="Class\Login.cs" />
     <Compile Include="Class\LoginManager.cs" />
+    <Compile Include="Class\Sefer.cs" />
     <Compile Include="Class\Train.cs" />
     <Compile Include="Class\Vehicle.cs" />
     <Compile Include="FirmScreen.cs">

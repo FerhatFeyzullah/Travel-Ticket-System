@@ -14,9 +14,7 @@ namespace Travel_Ticket_System.Class
 
         public string Username { get; set; }
         public string Password { get; set; }
-
-
-        public List<Vehicle> Araclar = new List<Vehicle>();
+  
 
         public Company(string companyIsim, string name, string pass)
         {
@@ -25,27 +23,45 @@ namespace Travel_Ticket_System.Class
             Username = name;
             Password = pass;
         }
-        public Company()
-        {               
-
-        }
 
         public bool GirisYap(string username, string password)
         {
             return this.Username == username && this.Password == password;
         }
 
+        public List<Vehicle> Araclar = new List<Vehicle>();
+        public void AracEkle(Vehicle arac)
+        {
+            Araclar.Add(arac);
+        }
+        public Company()
+        {               
+
+        }      
+
         public override string ToString()
         {
 
             return $"{companyName} (Turizm)";
         }
-       
 
-        public void AracEkle(Vehicle arac)
+        public List<Sefer> Seferler = new List<Sefer>();
+
+        public void SeferEkle(string nereden, string nereye, DateTime tarih, Vehicle arac,string firmaIsmi)
         {
-            Araclar.Add(arac);
+            Sefer yeniSefer = new Sefer
+            {
+                Nereden = nereden,
+                Nereye = nereye,
+                Tarih = tarih,
+                Arac = arac,
+                FirmaIsmi = firmaIsmi
+                
+            };
+            Seferler.Add(yeniSefer);
         }
+
+
 
 
     }
