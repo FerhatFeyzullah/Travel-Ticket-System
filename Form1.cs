@@ -20,19 +20,19 @@ namespace Travel_Ticket_System
         private void buttonYolcu_Click(object sender, EventArgs e)
         {
             PassengerScreen passengerScreen = new PassengerScreen();
-            passengerScreen.ShowDialog();
+            passengerScreen.Show();
         }
 
         private void buttonAdmin_Click(object sender, EventArgs e)
         {
             AdminScreen adminScreen = new AdminScreen();
-            adminScreen.ShowDialog();
+            adminScreen.Show();
         }
 
         private void buttonFirma_Click(object sender, EventArgs e)
         {
             FirmScreen firmScreen = new FirmScreen();
-            firmScreen.ShowDialog();
+            firmScreen.Show();
         }
 
         private void Form1_Load(object sender, EventArgs e)

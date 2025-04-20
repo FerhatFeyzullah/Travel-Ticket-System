@@ -82,7 +82,7 @@
             this.firmGirisPanel.Controls.Add(this.sifreText);
             this.firmGirisPanel.Controls.Add(this.firmGirisYapButton);
             this.firmGirisPanel.Controls.Add(this.kullaniciAdiText);
-            this.firmGirisPanel.Location = new System.Drawing.Point(285, 92);
+            this.firmGirisPanel.Location = new System.Drawing.Point(382, 92);
             this.firmGirisPanel.Name = "firmGirisPanel";
             this.firmGirisPanel.Size = new System.Drawing.Size(200, 250);
             this.firmGirisPanel.TabIndex = 3;

@@ -51,7 +51,7 @@
             // buttonYolcu
             // 
             this.buttonYolcu.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.buttonYolcu.Location = new System.Drawing.Point(12, 193);
+            this.buttonYolcu.Location = new System.Drawing.Point(282, 143);
             this.buttonYolcu.Name = "buttonYolcu";
             this.buttonYolcu.Size = new System.Drawing.Size(166, 46);
             this.buttonYolcu.TabIndex = 1;
@@ -62,7 +62,7 @@
             // buttonAdmin
             // 
             this.buttonAdmin.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.buttonAdmin.Location = new System.Drawing.Point(292, 193);
+            this.buttonAdmin.Location = new System.Drawing.Point(282, 226);
             this.buttonAdmin.Name = "buttonAdmin";
             this.buttonAdmin.Size = new System.Drawing.Size(166, 46);
             this.buttonAdmin.TabIndex = 1;
@@ -73,7 +73,7 @@
             // buttonFirma
             // 
             this.buttonFirma.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.buttonFirma.Location = new System.Drawing.Point(576, 193);
+            this.buttonFirma.Location = new System.Drawing.Point(282, 308);
             this.buttonFirma.Name = "buttonFirma";
             this.buttonFirma.Size = new System.Drawing.Size(166, 46);
             this.buttonFirma.TabIndex = 1;

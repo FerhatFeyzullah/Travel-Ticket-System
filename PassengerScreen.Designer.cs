@@ -47,32 +47,44 @@
             this.label6 = new System.Windows.Forms.Label();
             this.filtreleButton = new System.Windows.Forms.Button();
             this.seferGosterPanelAna = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.biletAramaPanel.SuspendLayout();
             this.seferGosterPanelAna.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // biletAramaPanel
             // 
             this.biletAramaPanel.BackColor = System.Drawing.Color.Gainsboro;
             this.biletAramaPanel.Controls.Add(this.seferGosterPanelAna);
+            this.biletAramaPanel.Controls.Add(this.pictureBox4);
+            this.biletAramaPanel.Controls.Add(this.pictureBox3);
+            this.biletAramaPanel.Controls.Add(this.pictureBox2);
+            this.biletAramaPanel.Controls.Add(this.pictureBox1);
             this.biletAramaPanel.Controls.Add(this.cmbNereye);
             this.biletAramaPanel.Controls.Add(this.cmbNereden);
             this.biletAramaPanel.Controls.Add(this.dtpSeferTarihi);
             this.biletAramaPanel.Controls.Add(this.Tren);
             this.biletAramaPanel.Controls.Add(this.Ucak);
             this.biletAramaPanel.Controls.Add(this.Otobus);
-            this.biletAramaPanel.Controls.Add(this.richTextBox5);
-            this.biletAramaPanel.Controls.Add(this.richTextBox6);
-            this.biletAramaPanel.Controls.Add(this.richTextBox7);
-            this.biletAramaPanel.Controls.Add(this.richTextBox8);
             this.biletAramaPanel.Controls.Add(this.label4);
             this.biletAramaPanel.Controls.Add(this.label5);
             this.biletAramaPanel.Controls.Add(this.label6);
             this.biletAramaPanel.Controls.Add(this.filtreleButton);
+            this.biletAramaPanel.Controls.Add(this.richTextBox7);
+            this.biletAramaPanel.Controls.Add(this.richTextBox8);
+            this.biletAramaPanel.Controls.Add(this.richTextBox5);
+            this.biletAramaPanel.Controls.Add(this.richTextBox6);
             this.biletAramaPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.biletAramaPanel.Location = new System.Drawing.Point(0, 0);
             this.biletAramaPanel.Name = "biletAramaPanel";
-            this.biletAramaPanel.Size = new System.Drawing.Size(754, 411);
+            this.biletAramaPanel.Size = new System.Drawing.Size(754, 489);
             this.biletAramaPanel.TabIndex = 1;
             // 
             // seferGosterPanel
@@ -166,11 +178,9 @@
             this.richTextBox5.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.richTextBox5.Location = new System.Drawing.Point(12, 233);
             this.richTextBox5.Name = "richTextBox5";
-            this.richTextBox5.Size = new System.Drawing.Size(134, 178);
+            this.richTextBox5.Size = new System.Drawing.Size(134, 245);
             this.richTextBox5.TabIndex = 8;
-            this.richTextBox5.Text = "7/24 Müşteri Hizmetleri \n\nHuhubilet.com ve Huhubilet mobil uygulamaları üzerinden" +
-    " yapacağınız tüm işlemlerde müşteri hizmetleri ekibimiz 7/24 yanınızda. Bir tıkl" +
-    "a destek ekibimize bağlanabilirsiniz.";
+            this.richTextBox5.Text = resources.GetString("richTextBox5.Text");
             // 
             // richTextBox6
             // 
@@ -179,7 +189,7 @@
             this.richTextBox6.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.richTextBox6.Location = new System.Drawing.Point(610, 233);
             this.richTextBox6.Name = "richTextBox6";
-            this.richTextBox6.Size = new System.Drawing.Size(134, 178);
+            this.richTextBox6.Size = new System.Drawing.Size(134, 245);
             this.richTextBox6.TabIndex = 8;
             this.richTextBox6.Text = resources.GetString("richTextBox6.Text");
             // 
@@ -190,11 +200,11 @@
             this.richTextBox7.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.richTextBox7.Location = new System.Drawing.Point(412, 233);
             this.richTextBox7.Name = "richTextBox7";
-            this.richTextBox7.Size = new System.Drawing.Size(134, 178);
+            this.richTextBox7.Size = new System.Drawing.Size(134, 245);
             this.richTextBox7.TabIndex = 8;
-            this.richTextBox7.Text = "Bütçe Dostu\n\nHuhubilet size tüm firmaların otobüs biletlerini sorgulama ve karşıl" +
-    "aştırma imkanı sunar. Bu sayede bütçenize uygun otobüs biletini rahatlıkla bulab" +
-    "ilir ve satın alabilirsiniz.";
+            this.richTextBox7.Text = "\n\n\n\n\nBütçe Dostu\n\nHuhubilet size tüm firmaların otobüs biletlerini sorgulama ve k" +
+    "arşılaştırma imkanı sunar. Bu sayede bütçenize uygun otobüs biletini rahatlıkla " +
+    "bulabilir ve satın alabilirsiniz.";
             // 
             // richTextBox8
             // 
@@ -203,11 +213,11 @@
             this.richTextBox8.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.richTextBox8.Location = new System.Drawing.Point(206, 233);
             this.richTextBox8.Name = "richTextBox8";
-            this.richTextBox8.Size = new System.Drawing.Size(134, 178);
+            this.richTextBox8.Size = new System.Drawing.Size(134, 245);
             this.richTextBox8.TabIndex = 8;
-            this.richTextBox8.Text = "Güvenli Ödeme\n\nTüm otobüs bilet alım işlemlerinizi ister evinizden, ister ofisini" +
-    "zden ya da dilerseniz cep telefonunuzdan kolay, hızlı ve güvenilir bir şekilde g" +
-    "erçekleştirebilirsiniz.";
+            this.richTextBox8.Text = "\n\n\n\n\nGüvenli Ödeme\n\nTüm otobüs bilet alım işlemlerinizi ister evinizden, ister of" +
+    "isinizden ya da dilerseniz cep telefonunuzdan kolay, hızlı ve güvenilir bir şeki" +
+    "lde gerçekleştirebilirsiniz.";
             // 
             // label4
             // 
@@ -258,14 +268,54 @@
             this.seferGosterPanelAna.Dock = System.Windows.Forms.DockStyle.Fill;
             this.seferGosterPanelAna.Location = new System.Drawing.Point(0, 0);
             this.seferGosterPanelAna.Name = "seferGosterPanelAna";
-            this.seferGosterPanelAna.Size = new System.Drawing.Size(754, 411);
+            this.seferGosterPanelAna.Size = new System.Drawing.Size(754, 489);
             this.seferGosterPanelAna.TabIndex = 16;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(12, 233);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(76, 66);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 17;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(206, 233);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(76, 66);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 17;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(412, 233);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(76, 66);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 17;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(610, 233);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(76, 66);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 17;
+            this.pictureBox4.TabStop = false;
             // 
             // PassengerScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(754, 411);
+            this.ClientSize = new System.Drawing.Size(754, 489);
             this.Controls.Add(this.biletAramaPanel);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -276,6 +326,10 @@
             this.biletAramaPanel.ResumeLayout(false);
             this.biletAramaPanel.PerformLayout();
             this.seferGosterPanelAna.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -299,5 +353,9 @@
         private System.Windows.Forms.Panel seferGosterPanel;
         private System.Windows.Forms.Button btnGeriDon;
         private System.Windows.Forms.Panel seferGosterPanelAna;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
