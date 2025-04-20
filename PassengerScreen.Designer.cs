@@ -31,11 +31,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PassengerScreen));
             this.biletAramaPanel = new System.Windows.Forms.Panel();
             this.seferGosterPanel = new System.Windows.Forms.Panel();
+            this.btnGeriDon = new System.Windows.Forms.Button();
             this.cmbNereye = new System.Windows.Forms.ComboBox();
             this.cmbNereden = new System.Windows.Forms.ComboBox();
-            this.cmbBulunanSeferler = new System.Windows.Forms.ComboBox();
             this.dtpSeferTarihi = new System.Windows.Forms.DateTimePicker();
-            this.filtreleButton = new System.Windows.Forms.Button();
             this.Tren = new System.Windows.Forms.Button();
             this.Ucak = new System.Windows.Forms.Button();
             this.Otobus = new System.Windows.Forms.Button();
@@ -46,21 +45,19 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btnGeriDon = new System.Windows.Forms.Button();
+            this.filtreleButton = new System.Windows.Forms.Button();
+            this.seferGosterPanelAna = new System.Windows.Forms.Panel();
             this.biletAramaPanel.SuspendLayout();
-            this.seferGosterPanel.SuspendLayout();
+            this.seferGosterPanelAna.SuspendLayout();
             this.SuspendLayout();
             // 
             // biletAramaPanel
             // 
             this.biletAramaPanel.BackColor = System.Drawing.Color.Gainsboro;
-            this.biletAramaPanel.Controls.Add(this.seferGosterPanel);
+            this.biletAramaPanel.Controls.Add(this.seferGosterPanelAna);
             this.biletAramaPanel.Controls.Add(this.cmbNereye);
             this.biletAramaPanel.Controls.Add(this.cmbNereden);
-            this.biletAramaPanel.Controls.Add(this.cmbBulunanSeferler);
             this.biletAramaPanel.Controls.Add(this.dtpSeferTarihi);
-            this.biletAramaPanel.Controls.Add(this.filtreleButton);
             this.biletAramaPanel.Controls.Add(this.Tren);
             this.biletAramaPanel.Controls.Add(this.Ucak);
             this.biletAramaPanel.Controls.Add(this.Otobus);
@@ -71,21 +68,30 @@
             this.biletAramaPanel.Controls.Add(this.label4);
             this.biletAramaPanel.Controls.Add(this.label5);
             this.biletAramaPanel.Controls.Add(this.label6);
-            this.biletAramaPanel.Controls.Add(this.button1);
+            this.biletAramaPanel.Controls.Add(this.filtreleButton);
             this.biletAramaPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.biletAramaPanel.Location = new System.Drawing.Point(0, 0);
             this.biletAramaPanel.Name = "biletAramaPanel";
-            this.biletAramaPanel.Size = new System.Drawing.Size(765, 436);
+            this.biletAramaPanel.Size = new System.Drawing.Size(754, 411);
             this.biletAramaPanel.TabIndex = 1;
             // 
             // seferGosterPanel
             // 
             this.seferGosterPanel.AutoScroll = true;
-            this.seferGosterPanel.Controls.Add(this.btnGeriDon);
-            this.seferGosterPanel.Location = new System.Drawing.Point(24, 20);
+            this.seferGosterPanel.Location = new System.Drawing.Point(0, 32);
             this.seferGosterPanel.Name = "seferGosterPanel";
-            this.seferGosterPanel.Size = new System.Drawing.Size(720, 400);
+            this.seferGosterPanel.Size = new System.Drawing.Size(754, 376);
             this.seferGosterPanel.TabIndex = 2;
+            // 
+            // btnGeriDon
+            // 
+            this.btnGeriDon.Location = new System.Drawing.Point(3, 3);
+            this.btnGeriDon.Name = "btnGeriDon";
+            this.btnGeriDon.Size = new System.Drawing.Size(54, 23);
+            this.btnGeriDon.TabIndex = 0;
+            this.btnGeriDon.Text = "< Geri";
+            this.btnGeriDon.UseVisualStyleBackColor = true;
+            this.btnGeriDon.Click += new System.EventHandler(this.btnGeriDon_Click);
             // 
             // cmbNereye
             // 
@@ -115,14 +121,6 @@
             this.cmbNereden.Size = new System.Drawing.Size(106, 21);
             this.cmbNereden.TabIndex = 14;
             // 
-            // cmbBulunanSeferler
-            // 
-            this.cmbBulunanSeferler.FormattingEnabled = true;
-            this.cmbBulunanSeferler.Location = new System.Drawing.Point(152, 192);
-            this.cmbBulunanSeferler.Name = "cmbBulunanSeferler";
-            this.cmbBulunanSeferler.Size = new System.Drawing.Size(321, 21);
-            this.cmbBulunanSeferler.TabIndex = 13;
-            // 
             // dtpSeferTarihi
             // 
             this.dtpSeferTarihi.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
@@ -130,18 +128,6 @@
             this.dtpSeferTarihi.Name = "dtpSeferTarihi";
             this.dtpSeferTarihi.Size = new System.Drawing.Size(104, 20);
             this.dtpSeferTarihi.TabIndex = 12;
-            // 
-            // filtreleButton
-            // 
-            this.filtreleButton.AutoSize = true;
-            this.filtreleButton.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.filtreleButton.Location = new System.Drawing.Point(628, 146);
-            this.filtreleButton.Name = "filtreleButton";
-            this.filtreleButton.Size = new System.Drawing.Size(107, 30);
-            this.filtreleButton.TabIndex = 10;
-            this.filtreleButton.Text = "Filtrele";
-            this.filtreleButton.UseVisualStyleBackColor = true;
-            this.filtreleButton.Click += new System.EventHandler(this.filtreleButton_Click);
             // 
             // Tren
             // 
@@ -254,30 +240,32 @@
             this.label6.TabIndex = 6;
             this.label6.Text = "Nereden";
             // 
-            // button1
+            // filtreleButton
             // 
-            this.button1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button1.Location = new System.Drawing.Point(628, 106);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(107, 30);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Sefer Ara";
-            this.button1.UseVisualStyleBackColor = true;
+            this.filtreleButton.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.filtreleButton.Location = new System.Drawing.Point(563, 106);
+            this.filtreleButton.Name = "filtreleButton";
+            this.filtreleButton.Size = new System.Drawing.Size(107, 30);
+            this.filtreleButton.TabIndex = 2;
+            this.filtreleButton.Text = "Sefer Ara";
+            this.filtreleButton.UseVisualStyleBackColor = true;
+            this.filtreleButton.Click += new System.EventHandler(this.filtreleButton_Click_1);
             // 
-            // btnGeriDon
+            // seferGosterPanelAna
             // 
-            this.btnGeriDon.Location = new System.Drawing.Point(3, 3);
-            this.btnGeriDon.Name = "btnGeriDon";
-            this.btnGeriDon.Size = new System.Drawing.Size(75, 23);
-            this.btnGeriDon.TabIndex = 0;
-            this.btnGeriDon.Text = "button2";
-            this.btnGeriDon.UseVisualStyleBackColor = true;
+            this.seferGosterPanelAna.Controls.Add(this.btnGeriDon);
+            this.seferGosterPanelAna.Controls.Add(this.seferGosterPanel);
+            this.seferGosterPanelAna.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.seferGosterPanelAna.Location = new System.Drawing.Point(0, 0);
+            this.seferGosterPanelAna.Name = "seferGosterPanelAna";
+            this.seferGosterPanelAna.Size = new System.Drawing.Size(754, 411);
+            this.seferGosterPanelAna.TabIndex = 16;
             // 
             // PassengerScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(765, 436);
+            this.ClientSize = new System.Drawing.Size(754, 411);
             this.Controls.Add(this.biletAramaPanel);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -287,7 +275,7 @@
             this.Load += new System.EventHandler(this.PassengerScreen_Load);
             this.biletAramaPanel.ResumeLayout(false);
             this.biletAramaPanel.PerformLayout();
-            this.seferGosterPanel.ResumeLayout(false);
+            this.seferGosterPanelAna.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -301,16 +289,15 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button filtreleButton;
         private System.Windows.Forms.Button Tren;
         private System.Windows.Forms.Button Ucak;
         private System.Windows.Forms.Button Otobus;
-        private System.Windows.Forms.Button filtreleButton;
         private System.Windows.Forms.DateTimePicker dtpSeferTarihi;
-        private System.Windows.Forms.ComboBox cmbBulunanSeferler;
         private System.Windows.Forms.ComboBox cmbNereye;
         private System.Windows.Forms.ComboBox cmbNereden;
         private System.Windows.Forms.Panel seferGosterPanel;
         private System.Windows.Forms.Button btnGeriDon;
+        private System.Windows.Forms.Panel seferGosterPanelAna;
     }
 }

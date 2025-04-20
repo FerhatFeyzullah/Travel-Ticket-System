@@ -26,14 +26,9 @@ namespace Travel_Ticket_System
 
         }
 
-        private void dateList_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            
-        }
-
         private void PassengerScreen_Load(object sender, EventArgs e)
         {
-            seferGosterPanel.Visible = false;
+            seferGosterPanelAna.Visible = false;
         }
 
         private void Otobus_Click(object sender, EventArgs e)
@@ -51,27 +46,41 @@ namespace Travel_Ticket_System
             secilenTip = "Train";
         }
 
-        private void filtreleButton_Click(object sender, EventArgs e)
+        private void filtreleButton_Click_1(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(secilenTip))
+            {
+                MessageBox.Show("Lütfen Seyahat Şeklini Seçiniz.");
+                return;
+            }
+
+
+            if (string.IsNullOrWhiteSpace(cmbNereden.Text) || string.IsNullOrWhiteSpace(cmbNereye.Text))
+            {
+                MessageBox.Show("Lütfen Boşlukları Doldurunuz.");
+                return;
+            }
+
             BulunanSeferler.Clear();
             string nereden = cmbNereden.SelectedItem?.ToString();
             string nereye = cmbNereye.SelectedItem?.ToString();
             DateTime secilentarih = dtpSeferTarihi.Value.Date;
 
+
             for (int i = 0; i < buis.Firmalar.Count; i++)
-            { 
+            {
                 comp = buis.Firmalar[i];
                 for (int j = 0; j < comp.Seferler.Count; j++)
                 {
 
-                sefer = comp.Seferler[j];
+                    sefer = comp.Seferler[j];
 
-                    if(sefer.Arac.GetType().Name == secilenTip &&
+                    if (sefer.Arac.GetType().Name == secilenTip &&
                        sefer.Nereden == nereden &&
                        sefer.Nereye == nereye &&
                        sefer.Tarih.Date == secilentarih)
                     {
-                    
+
                         BulunanSeferler.Add(sefer);
                     }
 
@@ -79,68 +88,64 @@ namespace Travel_Ticket_System
             }
 
             BulunanSeferleriGuncelle();
-            SeferleriListele();
-            seferGosterPanel.Visible = true;
+
+
+            if (BulunanSeferler.Count > 0)
+            {
+                SeferleriListele();
+                seferGosterPanelAna.Visible = true;
+            }
+            else { MessageBox.Show("Aramanıza Uygun Sefer Bulunamadı."); }
         }
 
         private void BulunanSeferleriGuncelle()
         {
             cmbNereden.SelectedIndex = -1;
             cmbNereye.SelectedIndex = -1;
-
-            cmbBulunanSeferler.Items.Clear();
-
-            foreach (var sefer in BulunanSeferler)
-            {
-                cmbBulunanSeferler.Items.Add(sefer);
-            
-            }
+           
         }
-
-        
-
+      
         public void SeferleriListele()
         {
 
-          
-
-           
-
-
             seferGosterPanel.Controls.Clear();
 
-            int yOffset = 50;
+            int yOffset = 10;
 
-            foreach (Sefer sefer in BulunanSeferler)
-            {
-                
+            
+                foreach (Sefer sefer in BulunanSeferler)
+                {
 
-                // Yeni panel oluştur
-                Panel p = new Panel();
-                p.Size = new Size(600, 100);
-                p.Location = new Point(10, yOffset);
-                p.BorderStyle = BorderStyle.FixedSingle;
 
-                // Label - Sefer bilgisi
-                Label lbl = new Label();
-                lbl.Text = $"→ {sefer.Nereden} - {sefer.Nereye} | Tarih: {sefer.Tarih.ToShortDateString()} {sefer.Tarih.ToShortTimeString()} | Plaka: {sefer.Arac.Plaka} | {sefer.FirmaIsmi}";
-                lbl.Location = new Point(10, 10);
-                lbl.AutoSize = true;
-                p.Controls.Add(lbl);
+                    // Yeni panel oluştur
+                    Panel p = new Panel();
+                    p.Size = new Size(730, 100);
+                    p.Location = new Point(10, yOffset);
+                    p.BorderStyle = BorderStyle.FixedSingle;
 
-                // Bilet Al Butonu (istersen)
-                Button btnBilet = new Button();
-                btnBilet.Text = "Bilet Al";
-                btnBilet.Location = new Point(10, 40);
-                btnBilet.Tag = sefer; // Bu butonun içine o seferi iliştiriyoruz
-                btnBilet.Click += BiletAlTiklandi;
-                p.Controls.Add(btnBilet);
+                    // Label - Sefer bilgisi
+                    Label lbl = new Label();
+                    lbl.Text = $"→ {sefer.Nereden} - {sefer.Nereye} | Tarih: {sefer.Tarih.ToShortDateString()} {sefer.Tarih.ToShortTimeString()} | Plaka: {sefer.Arac.Plaka} | {sefer.FirmaIsmi}";
+                    lbl.Location = new Point(10, 10);
+                    lbl.AutoSize = true;
+                    p.Controls.Add(lbl);
 
-                // Paneli ana panel'e ekle
-                seferGosterPanel.Controls.Add(p);
+                    // Bilet Al Butonu (istersen)
+                    Button btnBilet = new Button();
+                    btnBilet.Text = "Bilet Al";
+                    btnBilet.Location = new Point(10, 40);
+                    btnBilet.Tag = sefer; // Bu butonun içine o seferi iliştiriyoruz
+                    btnBilet.Click += BiletAlTiklandi;
+                    p.Controls.Add(btnBilet);
 
-                yOffset += 110; // Sonraki panelin y'si
-            }
+                    // Paneli ana panel'e ekle
+                    seferGosterPanel.Controls.Add(p);
+
+                    yOffset += 110; // Sonraki panelin y'si
+                }
+            
+            
+            
         }
 
         private void BiletAlTiklandi(object sender, EventArgs e)
@@ -152,16 +157,14 @@ namespace Travel_Ticket_System
             MessageBox.Show($"Bilet alındı:\n{secilenSefer.Nereden} → {secilenSefer.Nereye}");
         }
 
-        private void GeriDonTiklandi(object sender, EventArgs e)
+        private void btnGeriDon_Click(object sender, EventArgs e)
         {
-            
-            seferGosterPanel.Visible = false;
+            seferGosterPanelAna.Visible = false;
             biletAramaPanel.Visible = true;
 
-            
             seferGosterPanel.Controls.Clear();
         }
 
-
+        
     }
 }
