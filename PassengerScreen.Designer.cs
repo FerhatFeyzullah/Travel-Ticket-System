@@ -29,244 +29,288 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PassengerScreen));
-            this.passSearchPanel = new System.Windows.Forms.Panel();
-            this.richTextBox4 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox3 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.trenRadioButton = new System.Windows.Forms.RadioButton();
-            this.ucakRadioButton = new System.Windows.Forms.RadioButton();
-            this.otobusRadioButton = new System.Windows.Forms.RadioButton();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.seferAraButton = new System.Windows.Forms.Button();
-            this.tarihList = new System.Windows.Forms.ComboBox();
-            this.textNereye = new System.Windows.Forms.TextBox();
-            this.textNereden = new System.Windows.Forms.TextBox();
-            this.passSearchPanel.SuspendLayout();
-            this.groupBox1.SuspendLayout();
+            this.biletAramaPanel = new System.Windows.Forms.Panel();
+            this.seferGosterPanel = new System.Windows.Forms.Panel();
+            this.cmbNereye = new System.Windows.Forms.ComboBox();
+            this.cmbNereden = new System.Windows.Forms.ComboBox();
+            this.cmbBulunanSeferler = new System.Windows.Forms.ComboBox();
+            this.dtpSeferTarihi = new System.Windows.Forms.DateTimePicker();
+            this.filtreleButton = new System.Windows.Forms.Button();
+            this.Tren = new System.Windows.Forms.Button();
+            this.Ucak = new System.Windows.Forms.Button();
+            this.Otobus = new System.Windows.Forms.Button();
+            this.richTextBox5 = new System.Windows.Forms.RichTextBox();
+            this.richTextBox6 = new System.Windows.Forms.RichTextBox();
+            this.richTextBox7 = new System.Windows.Forms.RichTextBox();
+            this.richTextBox8 = new System.Windows.Forms.RichTextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnGeriDon = new System.Windows.Forms.Button();
+            this.biletAramaPanel.SuspendLayout();
+            this.seferGosterPanel.SuspendLayout();
             this.SuspendLayout();
             // 
-            // passSearchPanel
+            // biletAramaPanel
             // 
-            this.passSearchPanel.BackColor = System.Drawing.Color.Gainsboro;
-            this.passSearchPanel.Controls.Add(this.richTextBox1);
-            this.passSearchPanel.Controls.Add(this.richTextBox4);
-            this.passSearchPanel.Controls.Add(this.richTextBox3);
-            this.passSearchPanel.Controls.Add(this.richTextBox2);
-            this.passSearchPanel.Controls.Add(this.groupBox1);
-            this.passSearchPanel.Controls.Add(this.label3);
-            this.passSearchPanel.Controls.Add(this.label2);
-            this.passSearchPanel.Controls.Add(this.label1);
-            this.passSearchPanel.Controls.Add(this.seferAraButton);
-            this.passSearchPanel.Controls.Add(this.tarihList);
-            this.passSearchPanel.Controls.Add(this.textNereye);
-            this.passSearchPanel.Controls.Add(this.textNereden);
-            this.passSearchPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.passSearchPanel.Location = new System.Drawing.Point(0, 0);
-            this.passSearchPanel.Name = "passSearchPanel";
-            this.passSearchPanel.Size = new System.Drawing.Size(754, 431);
-            this.passSearchPanel.TabIndex = 0;
+            this.biletAramaPanel.BackColor = System.Drawing.Color.Gainsboro;
+            this.biletAramaPanel.Controls.Add(this.seferGosterPanel);
+            this.biletAramaPanel.Controls.Add(this.cmbNereye);
+            this.biletAramaPanel.Controls.Add(this.cmbNereden);
+            this.biletAramaPanel.Controls.Add(this.cmbBulunanSeferler);
+            this.biletAramaPanel.Controls.Add(this.dtpSeferTarihi);
+            this.biletAramaPanel.Controls.Add(this.filtreleButton);
+            this.biletAramaPanel.Controls.Add(this.Tren);
+            this.biletAramaPanel.Controls.Add(this.Ucak);
+            this.biletAramaPanel.Controls.Add(this.Otobus);
+            this.biletAramaPanel.Controls.Add(this.richTextBox5);
+            this.biletAramaPanel.Controls.Add(this.richTextBox6);
+            this.biletAramaPanel.Controls.Add(this.richTextBox7);
+            this.biletAramaPanel.Controls.Add(this.richTextBox8);
+            this.biletAramaPanel.Controls.Add(this.label4);
+            this.biletAramaPanel.Controls.Add(this.label5);
+            this.biletAramaPanel.Controls.Add(this.label6);
+            this.biletAramaPanel.Controls.Add(this.button1);
+            this.biletAramaPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.biletAramaPanel.Location = new System.Drawing.Point(0, 0);
+            this.biletAramaPanel.Name = "biletAramaPanel";
+            this.biletAramaPanel.Size = new System.Drawing.Size(765, 436);
+            this.biletAramaPanel.TabIndex = 1;
             // 
-            // richTextBox4
+            // seferGosterPanel
             // 
-            this.richTextBox4.BackColor = System.Drawing.Color.Gainsboro;
-            this.richTextBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox4.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.richTextBox4.Location = new System.Drawing.Point(610, 233);
-            this.richTextBox4.Name = "richTextBox4";
-            this.richTextBox4.Size = new System.Drawing.Size(134, 178);
-            this.richTextBox4.TabIndex = 8;
-            this.richTextBox4.Text = resources.GetString("richTextBox4.Text");
+            this.seferGosterPanel.AutoScroll = true;
+            this.seferGosterPanel.Controls.Add(this.btnGeriDon);
+            this.seferGosterPanel.Location = new System.Drawing.Point(24, 20);
+            this.seferGosterPanel.Name = "seferGosterPanel";
+            this.seferGosterPanel.Size = new System.Drawing.Size(720, 400);
+            this.seferGosterPanel.TabIndex = 2;
             // 
-            // richTextBox3
+            // cmbNereye
             // 
-            this.richTextBox3.BackColor = System.Drawing.Color.Gainsboro;
-            this.richTextBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox3.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.richTextBox3.Location = new System.Drawing.Point(412, 233);
-            this.richTextBox3.Name = "richTextBox3";
-            this.richTextBox3.Size = new System.Drawing.Size(134, 178);
-            this.richTextBox3.TabIndex = 8;
-            this.richTextBox3.Text = "Bütçe Dostu\n\nHuhubilet size tüm firmaların otobüs biletlerini sorgulama ve karşıl" +
-    "aştırma imkanı sunar. Bu sayede bütçenize uygun otobüs biletini rahatlıkla bulab" +
-    "ilir ve satın alabilirsiniz.";
+            this.cmbNereye.FormattingEnabled = true;
+            this.cmbNereye.Items.AddRange(new object[] {
+            "Sakarya",
+            "Kocaeli",
+            "Ankara",
+            "Istanbul",
+            "Trabzon"});
+            this.cmbNereye.Location = new System.Drawing.Point(225, 119);
+            this.cmbNereye.Name = "cmbNereye";
+            this.cmbNereye.Size = new System.Drawing.Size(106, 21);
+            this.cmbNereye.TabIndex = 15;
             // 
-            // richTextBox2
+            // cmbNereden
             // 
-            this.richTextBox2.BackColor = System.Drawing.Color.Gainsboro;
-            this.richTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox2.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.richTextBox2.Location = new System.Drawing.Point(206, 233);
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(134, 178);
-            this.richTextBox2.TabIndex = 8;
-            this.richTextBox2.Text = "Güvenli Ödeme\n\nTüm otobüs bilet alım işlemlerinizi ister evinizden, ister ofisini" +
-    "zden ya da dilerseniz cep telefonunuzdan kolay, hızlı ve güvenilir bir şekilde g" +
-    "erçekleştirebilirsiniz.";
+            this.cmbNereden.FormattingEnabled = true;
+            this.cmbNereden.Items.AddRange(new object[] {
+            "Sakarya",
+            "Kocaeli",
+            "Ankara",
+            "Istanbul",
+            "Trabzon"});
+            this.cmbNereden.Location = new System.Drawing.Point(84, 119);
+            this.cmbNereden.Name = "cmbNereden";
+            this.cmbNereden.Size = new System.Drawing.Size(106, 21);
+            this.cmbNereden.TabIndex = 14;
             // 
-            // richTextBox1
+            // cmbBulunanSeferler
             // 
-            this.richTextBox1.BackColor = System.Drawing.Color.Gainsboro;
-            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox1.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.richTextBox1.Location = new System.Drawing.Point(12, 233);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(134, 178);
-            this.richTextBox1.TabIndex = 8;
-            this.richTextBox1.Text = "7/24 Müşteri Hizmetleri \n\nHuhubilet.com ve Huhubilet mobil uygulamaları üzerinden" +
+            this.cmbBulunanSeferler.FormattingEnabled = true;
+            this.cmbBulunanSeferler.Location = new System.Drawing.Point(152, 192);
+            this.cmbBulunanSeferler.Name = "cmbBulunanSeferler";
+            this.cmbBulunanSeferler.Size = new System.Drawing.Size(321, 21);
+            this.cmbBulunanSeferler.TabIndex = 13;
+            // 
+            // dtpSeferTarihi
+            // 
+            this.dtpSeferTarihi.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpSeferTarihi.Location = new System.Drawing.Point(369, 116);
+            this.dtpSeferTarihi.Name = "dtpSeferTarihi";
+            this.dtpSeferTarihi.Size = new System.Drawing.Size(104, 20);
+            this.dtpSeferTarihi.TabIndex = 12;
+            // 
+            // filtreleButton
+            // 
+            this.filtreleButton.AutoSize = true;
+            this.filtreleButton.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.filtreleButton.Location = new System.Drawing.Point(628, 146);
+            this.filtreleButton.Name = "filtreleButton";
+            this.filtreleButton.Size = new System.Drawing.Size(107, 30);
+            this.filtreleButton.TabIndex = 10;
+            this.filtreleButton.Text = "Filtrele";
+            this.filtreleButton.UseVisualStyleBackColor = true;
+            this.filtreleButton.Click += new System.EventHandler(this.filtreleButton_Click);
+            // 
+            // Tren
+            // 
+            this.Tren.Location = new System.Drawing.Point(369, 20);
+            this.Tren.Name = "Tren";
+            this.Tren.Size = new System.Drawing.Size(87, 40);
+            this.Tren.TabIndex = 9;
+            this.Tren.Text = "Tren";
+            this.Tren.UseVisualStyleBackColor = true;
+            this.Tren.Click += new System.EventHandler(this.Tren_Click);
+            // 
+            // Ucak
+            // 
+            this.Ucak.Location = new System.Drawing.Point(225, 20);
+            this.Ucak.Name = "Ucak";
+            this.Ucak.Size = new System.Drawing.Size(87, 40);
+            this.Ucak.TabIndex = 9;
+            this.Ucak.Text = "Uçak";
+            this.Ucak.UseVisualStyleBackColor = true;
+            this.Ucak.Click += new System.EventHandler(this.Ucak_Click);
+            // 
+            // Otobus
+            // 
+            this.Otobus.Location = new System.Drawing.Point(84, 20);
+            this.Otobus.Name = "Otobus";
+            this.Otobus.Size = new System.Drawing.Size(87, 40);
+            this.Otobus.TabIndex = 9;
+            this.Otobus.Text = "Otobüs";
+            this.Otobus.UseVisualStyleBackColor = true;
+            this.Otobus.Click += new System.EventHandler(this.Otobus_Click);
+            // 
+            // richTextBox5
+            // 
+            this.richTextBox5.BackColor = System.Drawing.Color.Gainsboro;
+            this.richTextBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox5.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.richTextBox5.Location = new System.Drawing.Point(12, 233);
+            this.richTextBox5.Name = "richTextBox5";
+            this.richTextBox5.Size = new System.Drawing.Size(134, 178);
+            this.richTextBox5.TabIndex = 8;
+            this.richTextBox5.Text = "7/24 Müşteri Hizmetleri \n\nHuhubilet.com ve Huhubilet mobil uygulamaları üzerinden" +
     " yapacağınız tüm işlemlerde müşteri hizmetleri ekibimiz 7/24 yanınızda. Bir tıkl" +
     "a destek ekibimize bağlanabilirsiniz.";
             // 
-            // groupBox1
+            // richTextBox6
             // 
-            this.groupBox1.Controls.Add(this.trenRadioButton);
-            this.groupBox1.Controls.Add(this.ucakRadioButton);
-            this.groupBox1.Controls.Add(this.otobusRadioButton);
-            this.groupBox1.Location = new System.Drawing.Point(81, 12);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(387, 49);
-            this.groupBox1.TabIndex = 7;
-            this.groupBox1.TabStop = false;
+            this.richTextBox6.BackColor = System.Drawing.Color.Gainsboro;
+            this.richTextBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox6.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.richTextBox6.Location = new System.Drawing.Point(610, 233);
+            this.richTextBox6.Name = "richTextBox6";
+            this.richTextBox6.Size = new System.Drawing.Size(134, 178);
+            this.richTextBox6.TabIndex = 8;
+            this.richTextBox6.Text = resources.GetString("richTextBox6.Text");
             // 
-            // trenRadioButton
+            // richTextBox7
             // 
-            this.trenRadioButton.AutoSize = true;
-            this.trenRadioButton.Location = new System.Drawing.Point(235, 19);
-            this.trenRadioButton.Name = "trenRadioButton";
-            this.trenRadioButton.Size = new System.Drawing.Size(47, 17);
-            this.trenRadioButton.TabIndex = 5;
-            this.trenRadioButton.TabStop = true;
-            this.trenRadioButton.Text = "Tren";
-            this.trenRadioButton.UseVisualStyleBackColor = true;
+            this.richTextBox7.BackColor = System.Drawing.Color.Gainsboro;
+            this.richTextBox7.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox7.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.richTextBox7.Location = new System.Drawing.Point(412, 233);
+            this.richTextBox7.Name = "richTextBox7";
+            this.richTextBox7.Size = new System.Drawing.Size(134, 178);
+            this.richTextBox7.TabIndex = 8;
+            this.richTextBox7.Text = "Bütçe Dostu\n\nHuhubilet size tüm firmaların otobüs biletlerini sorgulama ve karşıl" +
+    "aştırma imkanı sunar. Bu sayede bütçenize uygun otobüs biletini rahatlıkla bulab" +
+    "ilir ve satın alabilirsiniz.";
             // 
-            // ucakRadioButton
+            // richTextBox8
             // 
-            this.ucakRadioButton.AutoSize = true;
-            this.ucakRadioButton.Location = new System.Drawing.Point(130, 19);
-            this.ucakRadioButton.Name = "ucakRadioButton";
-            this.ucakRadioButton.Size = new System.Drawing.Size(51, 17);
-            this.ucakRadioButton.TabIndex = 5;
-            this.ucakRadioButton.TabStop = true;
-            this.ucakRadioButton.Text = "Uçak";
-            this.ucakRadioButton.UseVisualStyleBackColor = true;
+            this.richTextBox8.BackColor = System.Drawing.Color.Gainsboro;
+            this.richTextBox8.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox8.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.richTextBox8.Location = new System.Drawing.Point(206, 233);
+            this.richTextBox8.Name = "richTextBox8";
+            this.richTextBox8.Size = new System.Drawing.Size(134, 178);
+            this.richTextBox8.TabIndex = 8;
+            this.richTextBox8.Text = "Güvenli Ödeme\n\nTüm otobüs bilet alım işlemlerinizi ister evinizden, ister ofisini" +
+    "zden ya da dilerseniz cep telefonunuzdan kolay, hızlı ve güvenilir bir şekilde g" +
+    "erçekleştirebilirsiniz.";
             // 
-            // otobusRadioButton
+            // label4
             // 
-            this.otobusRadioButton.AutoSize = true;
-            this.otobusRadioButton.Location = new System.Drawing.Point(18, 19);
-            this.otobusRadioButton.Name = "otobusRadioButton";
-            this.otobusRadioButton.Size = new System.Drawing.Size(59, 17);
-            this.otobusRadioButton.TabIndex = 5;
-            this.otobusRadioButton.TabStop = true;
-            this.otobusRadioButton.Text = "Otobüs";
-            this.otobusRadioButton.UseVisualStyleBackColor = true;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label4.Location = new System.Drawing.Point(366, 96);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(69, 15);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "Gidiş Tarihi";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label3
+            // label5
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label3.Location = new System.Drawing.Point(387, 96);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(69, 15);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Gidiş Tarihi";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label5.Location = new System.Drawing.Point(222, 96);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(47, 15);
+            this.label5.TabIndex = 6;
+            this.label5.Text = "Nereye";
             // 
-            // label2
+            // label6
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.Location = new System.Drawing.Point(222, 96);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(47, 15);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Nereye";
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label6.Location = new System.Drawing.Point(81, 96);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(55, 15);
+            this.label6.TabIndex = 6;
+            this.label6.Text = "Nereden";
             // 
-            // label1
+            // button1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(81, 96);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(55, 15);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Nereden";
+            this.button1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button1.Location = new System.Drawing.Point(628, 106);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(107, 30);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "Sefer Ara";
+            this.button1.UseVisualStyleBackColor = true;
             // 
-            // seferAraButton
+            // btnGeriDon
             // 
-            this.seferAraButton.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.seferAraButton.Location = new System.Drawing.Point(561, 109);
-            this.seferAraButton.Name = "seferAraButton";
-            this.seferAraButton.Size = new System.Drawing.Size(107, 30);
-            this.seferAraButton.TabIndex = 2;
-            this.seferAraButton.Text = "Sefer Ara";
-            this.seferAraButton.UseVisualStyleBackColor = true;
-            // 
-            // tarihList
-            // 
-            this.tarihList.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.tarihList.FormattingEnabled = true;
-            this.tarihList.Location = new System.Drawing.Point(390, 115);
-            this.tarihList.Name = "tarihList";
-            this.tarihList.Size = new System.Drawing.Size(106, 21);
-            this.tarihList.TabIndex = 1;
-            this.tarihList.SelectedIndexChanged += new System.EventHandler(this.dateList_SelectedIndexChanged);
-            // 
-            // textNereye
-            // 
-            this.textNereye.Location = new System.Drawing.Point(225, 115);
-            this.textNereye.Multiline = true;
-            this.textNereye.Name = "textNereye";
-            this.textNereye.Size = new System.Drawing.Size(106, 21);
-            this.textNereye.TabIndex = 0;
-            // 
-            // textNereden
-            // 
-            this.textNereden.Location = new System.Drawing.Point(81, 115);
-            this.textNereden.Multiline = true;
-            this.textNereden.Name = "textNereden";
-            this.textNereden.Size = new System.Drawing.Size(106, 21);
-            this.textNereden.TabIndex = 0;
+            this.btnGeriDon.Location = new System.Drawing.Point(3, 3);
+            this.btnGeriDon.Name = "btnGeriDon";
+            this.btnGeriDon.Size = new System.Drawing.Size(75, 23);
+            this.btnGeriDon.TabIndex = 0;
+            this.btnGeriDon.Text = "button2";
+            this.btnGeriDon.UseVisualStyleBackColor = true;
             // 
             // PassengerScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(754, 431);
-            this.Controls.Add(this.passSearchPanel);
+            this.ClientSize = new System.Drawing.Size(765, 436);
+            this.Controls.Add(this.biletAramaPanel);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "PassengerScreen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PassengerScreen";
-            this.passSearchPanel.ResumeLayout(false);
-            this.passSearchPanel.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.Load += new System.EventHandler(this.PassengerScreen_Load);
+            this.biletAramaPanel.ResumeLayout(false);
+            this.biletAramaPanel.PerformLayout();
+            this.seferGosterPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel passSearchPanel;
-        private System.Windows.Forms.TextBox textNereden;
-        private System.Windows.Forms.ComboBox tarihList;
-        private System.Windows.Forms.Button seferAraButton;
-        private System.Windows.Forms.TextBox textNereye;
-        private System.Windows.Forms.RadioButton otobusRadioButton;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RadioButton trenRadioButton;
-        private System.Windows.Forms.RadioButton ucakRadioButton;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.RichTextBox richTextBox4;
-        private System.Windows.Forms.RichTextBox richTextBox3;
-        private System.Windows.Forms.RichTextBox richTextBox2;
+        private System.Windows.Forms.Panel biletAramaPanel;
+        private System.Windows.Forms.RichTextBox richTextBox5;
+        private System.Windows.Forms.RichTextBox richTextBox6;
+        private System.Windows.Forms.RichTextBox richTextBox7;
+        private System.Windows.Forms.RichTextBox richTextBox8;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button Tren;
+        private System.Windows.Forms.Button Ucak;
+        private System.Windows.Forms.Button Otobus;
+        private System.Windows.Forms.Button filtreleButton;
+        private System.Windows.Forms.DateTimePicker dtpSeferTarihi;
+        private System.Windows.Forms.ComboBox cmbBulunanSeferler;
+        private System.Windows.Forms.ComboBox cmbNereye;
+        private System.Windows.Forms.ComboBox cmbNereden;
+        private System.Windows.Forms.Panel seferGosterPanel;
+        private System.Windows.Forms.Button btnGeriDon;
     }
 }

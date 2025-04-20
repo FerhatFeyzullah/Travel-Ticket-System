@@ -38,6 +38,7 @@
             this.kullaniciAdiText = new System.Windows.Forms.TextBox();
             this.panelFirmScreen = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.cmbMevcutAraclarCikarList = new System.Windows.Forms.ComboBox();
             this.cmbAracTipiEkle = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -49,6 +50,7 @@
             this.label13 = new System.Windows.Forms.Label();
             this.gelenPlakaEkleme = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cmbMevcutSeferlerdenCikar = new System.Windows.Forms.ComboBox();
             this.seferTarihEkle = new System.Windows.Forms.DateTimePicker();
             this.label8 = new System.Windows.Forms.Label();
             this.cmbMevcutSeferList = new System.Windows.Forms.ComboBox();
@@ -64,8 +66,6 @@
             this.seferNereyeEkle = new System.Windows.Forms.TextBox();
             this.seferNeredenEkle = new System.Windows.Forms.TextBox();
             this.firmNameText = new System.Windows.Forms.Label();
-            this.cmbMevcutSeferlerdenCikar = new System.Windows.Forms.ComboBox();
-            this.cmbMevcutAraclarCikarList = new System.Windows.Forms.ComboBox();
             this.firmGirisPanel.SuspendLayout();
             this.panelFirmScreen.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -185,6 +185,14 @@
             this.panel2.Size = new System.Drawing.Size(343, 397);
             this.panel2.TabIndex = 11;
             // 
+            // cmbMevcutAraclarCikarList
+            // 
+            this.cmbMevcutAraclarCikarList.FormattingEnabled = true;
+            this.cmbMevcutAraclarCikarList.Location = new System.Drawing.Point(37, 225);
+            this.cmbMevcutAraclarCikarList.Name = "cmbMevcutAraclarCikarList";
+            this.cmbMevcutAraclarCikarList.Size = new System.Drawing.Size(104, 21);
+            this.cmbMevcutAraclarCikarList.TabIndex = 8;
+            // 
             // cmbAracTipiEkle
             // 
             this.cmbAracTipiEkle.FormattingEnabled = true;
@@ -205,7 +213,6 @@
             this.label10.Size = new System.Drawing.Size(52, 13);
             this.label10.TabIndex = 6;
             this.label10.Text = "Araç Tipi:";
-
             // 
             // label3
             // 
@@ -307,6 +314,14 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(563, 397);
             this.panel1.TabIndex = 10;
+            // 
+            // cmbMevcutSeferlerdenCikar
+            // 
+            this.cmbMevcutSeferlerdenCikar.FormattingEnabled = true;
+            this.cmbMevcutSeferlerdenCikar.Location = new System.Drawing.Point(24, 159);
+            this.cmbMevcutSeferlerdenCikar.Name = "cmbMevcutSeferlerdenCikar";
+            this.cmbMevcutSeferlerdenCikar.Size = new System.Drawing.Size(301, 21);
+            this.cmbMevcutSeferlerdenCikar.TabIndex = 9;
             // 
             // seferTarihEkle
             // 
@@ -449,22 +464,6 @@
             this.firmNameText.TabIndex = 0;
             this.firmNameText.Text = "huhu";
             this.firmNameText.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // cmbMevcutSeferlerdenCikar
-            // 
-            this.cmbMevcutSeferlerdenCikar.FormattingEnabled = true;
-            this.cmbMevcutSeferlerdenCikar.Location = new System.Drawing.Point(24, 159);
-            this.cmbMevcutSeferlerdenCikar.Name = "cmbMevcutSeferlerdenCikar";
-            this.cmbMevcutSeferlerdenCikar.Size = new System.Drawing.Size(301, 21);
-            this.cmbMevcutSeferlerdenCikar.TabIndex = 9;
-            // 
-            // cmbMevcutAraclarCikarList
-            // 
-            this.cmbMevcutAraclarCikarList.FormattingEnabled = true;
-            this.cmbMevcutAraclarCikarList.Location = new System.Drawing.Point(37, 225);
-            this.cmbMevcutAraclarCikarList.Name = "cmbMevcutAraclarCikarList";
-            this.cmbMevcutAraclarCikarList.Size = new System.Drawing.Size(104, 21);
-            this.cmbMevcutAraclarCikarList.TabIndex = 8;
             // 
             // FirmScreen
             // 

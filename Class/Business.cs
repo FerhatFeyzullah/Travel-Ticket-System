@@ -39,9 +39,9 @@ namespace Travel_Ticket_System.Class
             C3.AracEkle(new Bus { Plaka = "34VIB34 (Otobüs)" });
             C3.AracEkle(new Bus { Plaka = "61VIB61 (Otobüs)" });
 
-            C4.AracEkle(new Bus { Plaka = "TK2954 (Uçak)" });
-            C4.AracEkle(new Bus { Plaka = "TK2934 (Uçak)" });
-            C4.AracEkle(new Bus { Plaka = "TK2961 (Uçak)" });
+            C4.AracEkle(new Airplane { Plaka = "TK2954 (Uçak)" });
+            C4.AracEkle(new Airplane { Plaka = "TK2934 (Uçak)" });
+            C4.AracEkle(new Airplane { Plaka = "TK2961 (Uçak)" });
             
             //Seferler//
 
@@ -52,7 +52,7 @@ namespace Travel_Ticket_System.Class
 
             C2.SeferEkle("Istanbul", "Kocaeli", new DateTime(2025, 04, 20, 12, 30, 00), C2.Araclar[0], "Metro");
             C2.SeferEkle("Ankara", "Sakarya", new DateTime(2025, 04, 20, 15, 00, 00), C2.Araclar[1], "Metro");
-            C2.SeferEkle("Sakarya", "Istanbul", new DateTime(2025, 04, 20, 18, 45, 00), C2.Araclar[2], "Metro");
+            C2.SeferEkle("Sakarya", "Trabzon", new DateTime(2025, 04, 20, 18, 45, 00), C2.Araclar[2], "Metro");
 
             C3.SeferEkle("Ankara", "Trabzon", new DateTime(2025, 04, 20, 12, 30, 00), C3.Araclar[0], "VIB");
             C3.SeferEkle("Istanbul", "Ankara", new DateTime(2025, 04, 20, 15, 00, 00), C3.Araclar[1], "VIB");

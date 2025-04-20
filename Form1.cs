@@ -34,5 +34,10 @@ namespace Travel_Ticket_System
             FirmScreen firmScreen = new FirmScreen();
             firmScreen.ShowDialog();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
